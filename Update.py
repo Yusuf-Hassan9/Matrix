@@ -27,13 +27,13 @@ class Character:
     # Feature For Player to Attack using Strength
     def attack(self,target):
         sprint("you throw a powerful punch, landing a solid hit on the"
-              "Henchman's jaw!\n")
+               " Henchman's jaw!\n")
         # Enemy Deals Damage
         target.HP -= random.randrange( 15 , 20 )
 
         # Using Weapon To Fight
     def weapon1_attack(self ,target):
-        print("You Hit a Henchman with a Weapon!\n")
+        print("You have landed a shot!\n")
         # Enemy Deals Damage
         target.HP -= self.weapon.damage
 
@@ -41,7 +41,7 @@ class Character:
     def powerup_attack(self, target):
         print("You have become unstoppable.\n")
         print("You dodge every bullet. Your Oppenet is now fearful. You have"
-              "striked the opponent.\n")
+              " striked the opponent.\n")
         target.HP -= self.powerup
 
     # Player Health Check
@@ -64,7 +64,7 @@ class Character:
 
     def visit_supermarket(self):
         print("Welcome to the supermarket. Choose food or drink to"
-              "re-energize:\n")
+              " re-energize:\n")
         supermarket_items = [
             ("Extra Strawberry", 5),
             ("Monster Energy", 10),
@@ -132,7 +132,7 @@ class Boss:
 
     # Henchman Boss Attacking With Weapon
     def weapon1_attack(self ,target):
-        print("You Have Been Critically Damaged with a Weapon \n")
+        print("You Have Been Critically Damaged with a Weapon.\n")
         target.HP -= self.weapon.damage
 
     # Henchman Boss Healthcheck
@@ -140,8 +140,8 @@ class Boss:
         print("Henchman Boss Health Check : \n", self.HP)
         if self.HP <= 0:
             print("Henchman Boss Defeated")
-            sprint(f"congratulations {player.name} You have Won the Battle Aga"
-                   "inst the Henchman \n")
+            sprint(f"congratulations {player.name} You have Won the Battle "
+                   "Against the Henchman \n")
             player.HP += 50
             battle = False
 
@@ -181,7 +181,7 @@ class Weapon1:
 start=True
 
 # Getting player name
-player = Character(input("What is your name player  :\n "), 100 , 25)
+player = Character(input("What is your name player :\n "), 100 , 25)
 
 # Looping Until Player name is given
 while player.name == "":
@@ -204,15 +204,14 @@ else:
     print("Please enter yes or no.")
     answer = input("Would You like to Take on the Matrix: Yes or No \n")
 
-Ascii_art1()
 print(f"{ai}\n")
 sprint(f"{player.name}, You are an Elite Hacker and a key member of the"
-      "organization The Real World.\n")
+       " organization The Real World.\n")
 sprint("For the past few years you have been working to end the"
-      "tyranny of The Matrix and" 
-       "Their evil plans to take control over the world.\n") 
+      " tyranny of The Matrix and" 
+       " Their evil plans to take control over the world.\n") 
 sprint("The Real World have finally gathered enough data to finally end the"
-      "corruption of The Matrix. However just today ...")
+      " corruption of The Matrix. However just today ...\n")
 
 sprint("Time : 11:00am ")
 sprint("Location : 9291 Burton Way, Beverly Hills\n")
@@ -221,32 +220,32 @@ sprint("Location : 9291 Burton Way, Beverly Hills\n")
 print(f"{npc}\n")
 sprint(f"'Dear {player.name},'\n")
 sprint("'By the time you are reading this message, The Matrix would have taken"
-      "down The Real World and our Database.'\n")
+       " down The Real World and our Database.'\n")
 sprint("'They have located our main headquarters, and this morning they "
        "launched a full-scale assault, destroying all our Resources.'\n")
 sprint("'I was fortunate enough to escape their henchmen, but I am currently"
        " hiding in a safe house, keeping a low profile.'\n")
 sprint("'However, The Matrix has become aware of our knowledge regarding their"
       " secrets and Dark Arts, and they are coming after every member of the"
-     "Real World.'\n")
+      " Real World.'\n")
 sprint("'The fate of the Real World and everything we have fought for now "
        "rests on your shoulders.'\n")
 sprint(f"'I believe that you are the only one who possesses the skills to save"
       " us and execute our original mission.'\n")
 sprint(f"'{player.name}, you must leave your apartment immediately after"
-      "reading this.'\n")
+       " reading this.'\n")
 sprint("'They will be at your door any second, and time is of the essence. I"
-      "will provide you with the location to retrieve a car.'\n")
+       " will provide you with the location to retrieve a car.'\n")
 sprint("'You must Grab one of the Cars from the Loction and Locate then head"
-      "to the Matrix Headquarters and retrieve our files before they are"
+       " to the Matrix Headquarters and retrieve our files before they are"
       " destroyed.'\n")
-sprint("'Once you Retrieve the files from The Matrix you can contact me throug"
-       "h this network and i will tell you where to meet me'\n")
+sprint("'Once you Retrieve the files from The Matrix you can contact me through"
+       " this network and i will tell you where to meet me'\n")
 sprint("'Good luck; our fate hinges on your success.'\n")
 sprint("'Remember, no pressure!'\n")
 
 print(f"{npc}\n")
-sprint("Car Location : 155 N Crescent Dr, Beverly Hills \n")
+sprint("Car Location : 155 N Crescent Dr, Beverly Hills\n")
 
 # Storyline
 print(f"{hman}\n")
@@ -272,10 +271,11 @@ print("Choose your Weapon Wisely : \n")
 # Loop until player chooses correctly
 while True:
     try:
-        Move1 = input("[A] Glock 19\n[B] Katana\n[C] Pump Shotgun \n\n").lower()
+        Move1 = input("[A] Glock 19\n[B] Katana\n[C] Pump Shotgun"
+                     "\n\n").lower()
         if Move1 == 'a':
             player.weapon = Weapon1("Glock 19")
-            print(f"Good Choice",{player.name},"\n")
+            print(f"Good Choice {player.name} \n")
             break
 
         elif Move1 == 'b':
@@ -284,13 +284,14 @@ while True:
             break
 
         elif Move1 == 'c':
-            print(f"Hit the Jackpot ",{player.name},"\n")
+            print(f"Hit the Jackpot {player.name} \n")
             player.weapon = Weapon1("Pump Shotgun")
             break
 
         else:
             sprint("Invalid choice, Choose correctly!\n")
-            Move1 = input("[A] Glock 19\n[B] Katana\n[C] Pump Shotgun \n\n").lower()
+            Move1 = input("[A] Glock 19\n[B] Katana\n[C] Pump Shotgun"
+                         "\n\n").lower()
 
     # Error Handling
     except Exception as e:
@@ -303,8 +304,8 @@ sprint("'He's there Take him down!' \n")
 
 print(f"{ai}\n")
 sprint(f"One of the Matrix Henchmen is barreling toward you, ready to take you"
-      "down!")
-sprint(f"'{player.name} Will you Fight the Henchman or Surrender ?'")
+      " down!\n")
+sprint(f"'{player.name} Will you Fight the Henchman or Surrender?'\n")
 
 print(f"{ai}\n")
 Move2 = input("[A] Proceed to Fight\n[B] Surrender \n\n").lower()
@@ -336,8 +337,8 @@ print(f"The Henchman's Health is: {matrix_henchman[0].HP}.\n")
 print(f"{ai}\n")
 print(f"Its time to Take on the Henchman",player.name,"! \n\n")
 input("Press ENTER to continue to battle:  \n\n")
-sprint("Proceeding into battle ...   Proceeding into battle ...   Proceeding i"
-       "nto battle ...  Proceeding into battle ... \n")
+sprint("Proceeding into battle ...   Proceeding into battle ...   Proceeding"
+      "into battle ...  Proceeding into battle ... \n")
 
 # First Henchman Battle
 while battle==True:
@@ -361,8 +362,8 @@ while battle==True:
             break
         else:
             print("Invalid Choice\n")
-            Move3 = input("[A] Attack with Weapon\n[B] Attack With Strength\n[C]"
-                     " Run Away \n\n").lower()
+            Move3 = input("[A] Attack with Weapon\n[B] Attack With Strength\n"
+                          "[C]Run Away \n\n").lower()
 
     # Making Player Deal Damage Throughout Battle
     henchman_choice = random.randint(1, 2)
@@ -392,7 +393,7 @@ sprint("'Finish Him off!!!'\n")
 print(f"{ai}\n")
 sprint("'You dealt with that Henchman like a true warrior!'\n")
 sprint("'But unfortunately, you are nowhere near finished here.'\n")
-sprint("'The Henchman Boss has just sent another one of his minions to "
+sprint("'The Henchman Boss has just sent another one of his minions to"
        " challenge you!'\n")
 input("Press ENTER to continue to the next battle:\n\n")
 
@@ -422,8 +423,8 @@ while battle==True:
         else:
             print("Invalid Choice\n")
             sprint("Choose your Move :\n")
-            Move3 = input("[A] Attack with Weapon\n[B] Attack With Strength\n[C]"
-                     " Run Away \n\n").lower()
+            Move3 = input("[A] Attack with Weapon\n[B] Attack With Strength\n"
+                          "[C] Run Away \n\n").lower()
 
     # Making Player Deal Damage Throughout the Battle
     henchman_choice = random.randint(1, 2)
@@ -451,8 +452,8 @@ henchman = Boss("Matrix Henchman Final Boss")
 # Storyline
 print(f"{hmanb}\n")
 sprint("'No! This can't be!'\n")
-sprint("'Well then... I guess I will have to take matters into my own hands.'"
-       "\"n")
+sprint("'Well then... I guess I will have to take matters into my own "
+        "hands.'\n")
 sprint("'You will regret going against the Matrix!'\n")
 
 print(f"{ai}\n")
@@ -524,8 +525,8 @@ print(f"{player.name}: \n")
 sprint("'Fine,you choose Pain'\n")
 print(f"{ai}\n")
 sprint(f"Make your decision Wisely {player.name} :\n")
-Move6 = input("[A] Get Henchman to talk by Waterboarding Him \n[B] Get "
-              "Henchman to talk by Lighting him on Fire\n").lower()
+Move6 = input("[A] Get Henchman to talk by Waterboarding Him \n[B] Get"
+              " Henchman to talk by Lighting him on Fire\n").lower()
 while True:
         if Move6 == 'a':
              print(f"{hmanb}\n")
@@ -550,8 +551,8 @@ while True:
                  exit()
         else:
             print("Inavlid Choice\n")
-            Move6 = input("[A] Get Henchman to talk by Waterboarding Him \n[B] Get "
-                          "Henchman to talk by Lighting him on Fire\n").lower()
+            Move6 = input("[A] Get Henchman to talk by Waterboarding Him \n[B] Get"
+                          " Henchman to talk by Lighting him on Fire\n").lower()
 
 # Storyline 
 print(f"{ai}\n")
@@ -613,7 +614,7 @@ while True:
             player.car = Car3
             sprint("Ahh, the Porsche 911 GT3 RS. A true track weapon!\n")
             sprint(f"Excellent choice, {player.name}! It's built for speed and"
-                  "precision.\n")
+                  " precision.\n")
             break
 
         elif Move7 == 'd':
@@ -662,76 +663,89 @@ if player.car == Car1:
             if Move == 'a':
                 sprint("Time: 3:20 pm")
                 sprint("Location: On route to 12th Ave, Santa Cruz\n")
-                sprint("You hit 190mph and leave the agents in the dust. The M5 raw"
+                sprint("You hit 190mph and leave the agents in the dust."
+                      " The M5 raw"
                       " power gives you the edge!\n")
-                sprint("Its going to be one nice long road down to California\n")
+                sprint("Its going to be one nice long road down to"
+                      " California\n")
                 player.car.drive(300)
                 break
 
             elif Move == 'b':
-                sprint("You get off the Highway, turn into the backstreets, and thanks"
-                      " to the M5 handling, you swiftly lose one of the Sedans in the"
-                      " maze of alleys.")
+                sprint("You get off the Highway, turn into the backstreets,"
+                      " and thanks"
+                      " to the M5 handling, you swiftly lose one of the Sedans"
+                      " in the maze of alleys.")
                 player.car.drive(30)
-                sprint("You are feeling Hungry and there is a Supermarket Right Next"
-                      " to you, However you know that time is the essence.\n")
+                sprint("You are feeling Hungry and there is a Supermarket"
+                      " Right Next to you, However you know that time is"
+                       "the essence.\n")
 
                 sprint("Do you : \n")
-                Move = input("[A] Go into the Supermarket And Re-Energize?\n[B] Head "
-                             "Back onto the Highway to head to Location?\n").lower()
+                Move = input("[A] Go into the Supermarket And Re-Energize?\n"
+                             "[B] Head Back onto the Highway to head to"
+                            " Location?\n").lower()
 
                 while True:
                     if Move == 'a':
                         sprint("I guess someone is Hungry\n")
                         input("Press ENTER to go inside the supermarket\n")
                         player.visit_supermarket()
-                        sprint(f"{player.name} Now that you are Re-Energized, You now need"
-                              " to continue on with your Journey Quickly, However you"
-                              " have 2 route options\n")
+                        sprint(f"{player.name} Now that you are Re-Energized,"
+                              " You now need to continue on with your Journey"
+                             " Quickly, However you have 2 route options\n")
 
                         sprint("Do You:")
-                        Move =  input("[A] Head Back onto the Highway?\n[B] Take the"
-                                     " Backroads\n").lower()
+                        Move =  input("[A] Head Back onto the Highway?\n"
+                                      "[B] Take the Backroads\n").lower()
                         while True:
                                 if Move == 'a':
-                                    sprint(f"Pretty Good Decision {player.name}")
+                                    sprint(f"Pretty Good Decision "
+                                           f"{player.name}")
                                     sprint("Time: 3:40 pm")
                                     sprint("Location: The Highway\n")
-                                    sprint("Its going to be one nice long road down to"
-                                          " California\n")
+                                    sprint("Its going to be one nice long road"
+                                          " down to California\n")
                                     player.car.drive(240)
                                     break
 
                                 elif Move == 'b':
-                                    sprint("I Guess you just love Twist And Turns\n")
+                                    sprint("I Guess you just love Twist And"
+                                          " Turns\n")
                                     sprint("Time: 3:40 pm")
                                     sprint("Location: Backroads\n")
-                                    sprint("This is going To be a long trip to California\n")
-                                    sprint("Your Fuel is going to take a massive hit for sure\n")
+                                    sprint("This is going To be a long trip to"
+                                          " California\n")
+                                    sprint("Your Fuel is going to take a"
+                                          " massive hit for sure\n")
                                     player.car.drive(330)
                                     break
 
                                 else:
-                                    sprint("Invalid Choice, Choose a option!\n")
-                                    Move =  input("[A] Head Back onto the Highway?\n[B] Take the"
+                                    sprint("Invalid Choice, Choose a option!"
+                                           "\n")
+                                    Move =  input("[A] Head Back onto the "
+                                                  "Highway?\n[B] Take the"
                                      " Backroads\n").lower()
 
                     elif Move == 'b':
-                        sprint("The Matrix Agents in sedans Were both waiting for you at"
-                              " the Highway Entrance\n")
+                        sprint("The Matrix Agents in sedans Were both waiting"
+                               " for you at the Highway Entrance\n")
                         sprint("You Should have Waited Abit Longer\n")
                         sprint("Mission Failed.")
                         exit()
                         
                     else:
                         sprint("Invalid Choice, Choose a option!\n")
-                        Move = input("[A] Go into the Supermarket And Re-Energize?\n[B] Head"
-                             " Back onto the Highway to head to Location?\n").lower()
+                        Move = input("[A] Go into the Supermarket And "
+                                     "Re-Energize?\n[B] Head"
+                             " Back onto the Highway to head to Location?"
+                             "\n").lower()
             else:
                 sprint("Invalid Choice, Choose a option!\n")
-                Move = input("[A] Floor it and try to outpace them?\n[B] Get off the"
-                " Highway into Backstreets at the next exit and then Try to"
-                " lose them?\n").lower()
+                Move = input("[A] Floor it and try to outpace them?\n[B]"
+                            " Get off the Highway into Backstreets at the next"
+                           " exit and then Try to lose them?\n").lower()
 
     # The Mercedes
 elif player.car == Car2:
@@ -745,28 +759,31 @@ elif player.car == Car2:
            " you feel the rear end starting to slip.")
 
     sprint("Do you:")
-    Move = input("[A] Ease off the throttle and regain control?\n[B] Continue fast around the corners drifting as you know"
+    Move = input("[A] Ease off the throttle and regain control?\n[B] Continue"
+                " fast around the corners drifting as you know"
                  " that time is the essence\n").lower()
     while True:
             if Move == 'a':
                 sprint("Time: 3:20 pm")
                 sprint("Location: Country Roads\n")
-                sprint("You slow down and regain traction, carefully navigating through"
-                      " the storm. Smart move!\n")
+                sprint("You slow down and regain traction, carefully"
+                      " navigating through the storm. Smart move!\n")
                 player.car.drive(200)
-                sprint("You have been Driving through the country roads for some time"
-                 "now ... , You look through your rear mirrors and see a Dark sedan\n")
-                sprint("You instantly detect the sedan as the Matrix Agents Sedan\n")
-                sprint("You now need to Lose the Matrix Agent as the sedan begins"
-                      "picking up speed towards you")
-                sprint("You know that the Power of your car can easily lose the Sedan "
-                       "on the country roads.\n However there is also an exit coming"
-                       " up leading to the Highway.\n")
+                sprint("You have been Driving through the country roads for"
+                 " some time now ... , You look through your rear"
+                 " mirrors and see a Dark sedan\n")
+                sprint("You instantly detect the sedan as the Matrix Agents"
+                      " Sedan\n")
+                sprint("You now need to Lose the Matrix Agent as the sedan "
+                       "begins picking up speed towards you")
+                sprint("You know that the Power of your car can easily lose"
+                      " the Sedan on the country roads.\n However there is "
+                      "also an exit coming up leading to the Highway.\n")
               
                 sprint("Do you:")
-                Move1 = input("[A] Put your Foot down and try to lose the sedan on the "
-                             "country roads?\n[B] Exit onto the Highway and try to"
-                             " lose the sedan there?\n").lower()
+                Move1 = input("[A] Put your Foot down and try to lose the "
+                         "sedan on the country roads?\n[B] Exit onto the"
+                         " Highway and try to lose the sedan there?\n").lower()
                 while True:
                         if Move1 == 'a':
                             sprint("Time: 5:00 pm")
@@ -774,11 +791,14 @@ elif player.car == Car2:
                             print(f"{player.name}:\n")
                             sprint("'OH NO F*Ck!'\n")
                             print(f"{ai}\n")
-                            sprint(f"{player.name} you were moving at 160mph on the country "
-                                   "roads, Whilst the roads were still slippery\n")
-                            sprint("Therefore when you came to a harsh turn the C63 Could"
-                                  "not cope and slided out; Causing you to Crash into a field\n")
-                            sprint("You wake up later, captured by the Matrix Agents\n")
+                            sprint(f"{player.name} you were moving at 160mph"
+                                  " on the country roads, Whilst the roads"
+                                 " were still slippery\n")
+                            sprint("Therefore when you came to a harsh turn "
+                                 "the C63 Could not cope and slided out;"
+                                 " Causing you to Crash into a field\n")
+                            sprint("You wake up later, captured by the Matrix"
+                                   " Agents\n")
                             sprint("Mission Failed.")
                             exit()
 
@@ -787,9 +807,12 @@ elif player.car == Car2:
                             sprint("Location: Unknown\n")
                             print(f"{ai}\n")
                             sprint(f"Wise Decision {player.name}\n")
-                            sprint("You Successfully exited onto the Highway with the Sedan"
-                                  "still behind you but abit further\n")
-                            sprint("The power of your car then allowed you to easily gap the Sedan by miles, And then continue to California down the Highway\n")
+                            sprint("You Successfully exited onto the Highway"
+                                   " with the Sedan still behind you but abit"
+                                   "further\n")
+                            sprint("The power of your car then allowed you to"
+                                  " easily gap the Sedan by miles, And then"
+                                 " continue to California down the Highway\n")
                             player.car.drive(130)
                             break
 
@@ -800,18 +823,18 @@ elif player.car == Car2:
             elif Move == 'b':
                 sprint("Time: 3:35 pm")
                 sprint("Location: Country Roads\n")
-                sprint("You decide to drift, but the road is too slick!.\n you were"
-                     " moving at 160mph on the country roads You spin out at a harsh"
-                     " turn into some Fields.\n")
+                sprint("You decide to drift, but the road is too slick!.\n you"
+                 " were moving at 160mph on the country roads You spin out at"
+                 " a harsh turn into some Fields.\n")
                 sprint("You wake up later, captured by Matrix Agents\n")
                 sprint("Mission Failed.")
                 exit()
 
             else:
                 sprint("Inavlid choice, Choose a option!\n")
-                Move = input("[A] Ease off the throttle and regain control?\n[B]"
-                 " Continue fast around the corners drifting as you know"
-                 " that time is the essence\n").lower()
+                Move = input("[A] Ease off the throttle and regain control?\n"
+                             "[B] Continue fast around the corners drifting as"
+                             " you know that time is the essence\n").lower()
 
     # The Porsche
 elif player.car == Car3:
@@ -840,13 +863,13 @@ elif player.car == Car3:
         if Move == 'a':
             sprint("Time: 3:30 pm")
             sprint("Location: The Highway\n")
-            sprint("You head towards the highway and press your foot down, But the"
-                  " drones lock onto you with ease in the open. They are closing in"
-                  " fast!\n")
-            sprint("The Drones got close enough and Sprayed down your car with the"
-                   " machine guns totally demolishing the tyres.\n")
-            sprint("This caused you to spin out at a high speed on the Highway..."
-                   "\n")
+            sprint("You head towards the highway and press your foot down,"
+                  "But the drones lock onto you with ease in the open. They"
+                 " are closing in fast!\n")
+            sprint("The Drones got close enough and Sprayed down your car with"
+                  " the machine guns totally demolishing the tyres.\n")
+            sprint("This caused you to spin out at a high speed on the Highway"
+                   "...\n")
             sprint("You Fatally Crashed and Died as the Engine Blew.\n")
             print(f"{ai}\n")
             sprint("'I guess you should Never underestimate Drones'\n")
@@ -857,29 +880,30 @@ elif player.car == Car3:
             sprint("Time: 3:15 pm")
             sprint("Location: Downtown, Los Angeles\n")
             sprint("You stay in the tight city streets.\n using the Porsche's "
-                   "agility to your advantage, You are able to lose the drones and"
-                   " find a underground car park of a Supermarket.\n")
+                   "agility to your advantage, You are able to lose the drones"
+                  " and find a underground car park of a Supermarket.\n")
             player.car.drive(30)
             sprint("You have Waited in the Underground car park for abit \n")
             sprint("You are feeling abit unenergized\n")
-            sprint("It is now the right time to leave the Car park and Resume with"
-                   " your journey.\n")
+            sprint("It is now the right time to leave the Car park and Resume"
+                   " with your journey.\n")
 
             print("Do you:")
-            Move = input("[A] Go to the supermarket and Re-Energize?\n[B] Resume"
-                         " With your Journey?\n").lower()
+            Move = input("[A] Go to the supermarket and Re-Energize?\n[B]"
+                        " Resume With your Journey?\n").lower()
 
             while True:
                 if Move == 'a':
                     sprint("Well If you Must\n")
                     input("Press ENTER to go inside the supermarket\n")
                     player.visit_supermarket()
-                    sprint(f"{player.name} Now you are Re-Energized, You now need to "
-                           "continue on fast with your Journey Quickly\n")
+                    sprint(f"{player.name} Now you are Re-Energized, You now "
+                      "need to continue on fast with your Journey Quickly\n")
                     input("Press ENTER to continue with your journey\n")
                     sprint("Time : 3:25pm ")
                     sprint("Location : The Highway\n")
-                    sprint("Your now on the Highway on route to the Matrix Base")
+                    sprint("Your now on the Highway on route to the Matrix"
+                           " Base")
                     sprint("Just one Long Road Down to California ....\n")
                     player.car.drive(340)
                     break
@@ -888,23 +912,24 @@ elif player.car == Car3:
                     sprint("Very Well..\n")
                     sprint("Time : 3:10pm ")
                     sprint("Location : The Highway\n")
-                    sprint("Your now on the Highway on route to the Matrix Base")
+                    sprint("Your now on the Highway on route to the Matrix "
+                           "Base")
                     sprint("Just one Long Road Down to California ....\n")
                     player.car.drive(340)
                     break
 
                 else:
                     sprint("Invalid Choice, Choose a option!\n")
-                    Move = input("[A] Go to the supermarket and Re-Energize?\n[B] Resume"
-                         " With your Journey?\n").lower()
+                    Move = input("[A] Go to the supermarket and Re-Energize?"
+                                 "\n[B] Resume With your Journey?\n").lower()
 
             break
 
         else:
             sprint("Invalid Choice, Choose a option!\n")
-            Move = input("[A] Head towards the highway so that you can try and outpace"
-                " them ?\n[B] Stay in the city and look for a Hidden place to "
-                "wait for abit?\n").lower()
+            Move = input("[A] Head towards the highway so that you can try and"
+             " outpace them ?\n[B] Stay in the city and look for a Hidden place"
+             " to wait for abit?\n").lower()
 
 # The Nissan
 elif player.car == Car4:
@@ -941,30 +966,31 @@ elif player.car == Car4:
         if Move == 'a':
           sprint("Time: 3:30 pm")
           sprint("Location: Los Angeles, Near the Highway\n")
-          sprint("You head towards the highway and press your foot down, But the"
-                "Helicopter locks onto you with ease in the open!\n")
+          sprint("You head towards the highway and press your foot down, But "
+                 "the Helicopter locks onto you with ease in the open!\n")
           sprint("The Helicopter got close enough and sprayed down your car with"
-                "the machine guns totally demolishing your tyres.\n")
+                 " the machine guns totally demolishing your tyres.\n")
           sprint("This caused you to spin out at a high speed on the Highway..."
-                 "\n")
+                  "\n")
           sprint("You Fatally Crashed and Died as the Engine Blew.\n")
           print(f"{ai}\n")
           sprint("'I guess you should Never underestimate A Helicopter with"
-                "Machine Guns'\n")
+                 " Machine Guns'\n")
           sprint("Mission Failed.")
           exit()
 
         elif Move == 'b':
            sprint("Time: 3:15 pm")
            sprint("Location: Downtown, Los Angeles\n")
-           sprint("You stay in the tight city streets.\n using the GTRs Beauty of"
-                 "Drifting corners smoothly, You are able to lose the Helicopter "
-                 "Eventually and find a underground car park of a Supermarket.\n")
+           sprint("You stay in the tight city streets.\n using the GTRs Beauty"
+           " of Drifting corners smoothly, You are able to lose the Helicopter"
+           " Eventually and find a underground car park of a Supermarket.\n")
            player.car.drive(30)
-           sprint("You have now Waited in the Underground car park for abit \n")
+           sprint("You have now Waited in the Underground car park for abit"
+                  "\n")
            sprint("You are feeling abit unenergized\n")
-           sprint("It is now the right time to leave the Car park and Resume with"
-                 "your journey\n")
+           sprint("It is now the right time to leave the Car park and Resume"
+                   " with your journey\n")
 
            print("Do you:\n")
            Move = input("[A] Go to the supermarket and Re-Energize?\n[B] Resume"
@@ -974,7 +1000,8 @@ elif player.car == Car4:
                    sprint("Well If you Must\n")
                    input("Press ENTER to go inside the supermarket\n")
                    player.visit_supermarket()
-                   sprint(f"{player.name} Now you are Re-Energized, You now need to"
+                   sprint(f"{player.name} Now you are Re-Energized, You now"
+                         " need to"
                          "continue on with your Journey Quickly\n")
                    input("Press ENTER to continue with your journey\n")
                    sprint("Time : 3:25pm ")
@@ -995,15 +1022,16 @@ elif player.car == Car4:
 
                else:
                     sprint("Invalid Choice, Choose a option!\n")
-                    Move = input("[A] Go to the supermarket and Re-Energize?\n[B] Resume"
-                        " With your Journey?\n").lower()
+                    Move = input("[A] Go to the supermarket and Re-Energize?\n"
+                                 "[B] Resume With your Journey?\n").lower()
            break
 
         else:
              sprint("Invalid Choice, Choose a option!\n")
-             Move = input("[A] Enter the Highway and then try to outrun the Helicopter"
-               " on the Highway?\n[B] Try and lose the Helicopter on the city"
-               " streets and Find a place to hide for abit?\n").lower()
+             Move = input("[A] Enter the Highway and then try to outrun the"
+                         " Helicopter on the Highway?\n[B] Try and lose the "
+                         " Helicopter on the city streets and Find a place"
+                         " to hide for abit?\n").lower()
 
 # End of Car Scenarios And options
 # The Infiltration
@@ -1047,7 +1075,7 @@ while True:
             player.visit_supermarket()
             sprint("Feeling better already. Now, let's get to work.\n")
         sprint(f"{player.name}, it's game time.\n")
-        input("Press ENTER to continue")
+        input("Press ENTER to continue\n")
         break
 
     elif Move == 'b':
@@ -1056,13 +1084,14 @@ while True:
 
         if player.HP <= 80:
             sprint(f"{player.name} your Health is Very low.\n")
-            sprint("You should Visit Target and Re-Energize before going into the"
+            sprint("You should Visit Target and Re-Energize before going"
+                  " into the"
                    " Matrix Base.\n")
             input("Press ENTER to go inside Target")
             player.visit_supermarket()
             sprint("Now thats Better!\n")
         sprint(f"{player.name} its Gametime now.\n")
-        input("Press ENTER to continue")
+        input("Press ENTER to continue\n")
         break
 
     else:
@@ -1084,8 +1113,9 @@ sprint("The clock's ticking. Make your move.\n")
 
 # Provide the player with options for approaching the base
 sprint("Do you: \n")
-Move1 = get_valid_input("[A] Climb The Fence into the Compound? \n[B] Enter through the"
-             " Back Entrance Using Stealth?\n", ['a', 'b']).lower()
+Move1 = get_valid_input("[A] Climb The Fence into the Compound? \n[B]"
+                       " Enter through the Back Entrance Using "
+                        "Stealth?\n", ['a', 'b']).lower()
 while True:
     if Move1 == 'a':
         # Fence Approach
@@ -1097,63 +1127,68 @@ while True:
         sprint("There is no turning back now!\n")
         
         print("Do you:\n")
-        Move = get_valid_input("[A] Try to hurdle over the spikes?\n[B] Look for a way to"
-                     " cover the spikes?\n", ['a', 'b']).lower()
+        Move = get_valid_input("[A] Try to hurdle over the spikes?\n[B] Look"
+                " for a way to cover the spikes?\n", ['a', 'b']).lower()
 
         while True:
             if Move == 'a':
                 # Option to hurdle over the spikes
-                sprint("You brace yourself and prepare to leap over the spikes.\n")
-                sprint("With a burst of energy, you jump, trying to clear the sharp"
-                      "points...\n")
+                sprint("You brace yourself and prepare to leap over the spikes."
+                       "\n")
+                sprint("With a burst of energy, you jump, trying to clear the "
+                       "sharp points...\n")
                 hurdle_success = random.choice([True, False]) # Random chance for success
         
                 if hurdle_success:
-                    sprint("You manage to Successfully Hurdle over the spikes.\n")
-                    print(f"'{player.name} you Really avoided those spikes like a"
-                         "Ninja'")
+                    sprint("You manage to Successfully Hurdle over the spikes."
+                           "\n")
+                    print(f"'{player.name} you Really avoided those spikes like"
+                          "a Ninja'")
                     sprint("You can see a entrance into the Building.\n")
                     input("Press ENTER to go to the entrance \n")
-                    sprint("You are now at the entrance, And to your suprise there are"
-                          "no Matrix Guards to be seen.\n")
+                    sprint("You are now at the entrance, And to your suprise"
+                           " there are"
+                           " no Matrix Guards to be seen.\n")
                     input("Press ENTER to go inside the Matrix Base \n")
                     break
                     
                 else:
-                    sprint("You leap, but your leg catches one of the spikes!\n")
-                    sprint("You manage to pull yourself over, but you are bleeding"
-                          "from a nasty cut.\n")
+                    sprint("You leap, but your leg catches one of the"
+                          " spikes!\n")
+                    sprint("You manage to pull yourself over, but you are"
+                          " bleeding from a nasty cut.\n")
                     player.HP -= 20  # Reduce player's health
-                    sprint(f"{player.name}, you lose 20 HP. Current HP: {player.HP}\n")
+                    sprint(f"{player.name}, you lose 20 HP. Current HP: "
+                           f"{player.HP}\n")
                     sprint("You have to patch up the Wound.\n")
                     input("Press ENTER to patch up wound \n")
                     player.HP -= 20  # Give Back Health
-                    sprint("You Found some Cloth in the Container and used it to patch"
-                          "up your wound.\n")
+                    sprint("You Found some Cloth in the Container and used it"
+                           " to patchup your wound.\n")
                     sprint("Your leg will be fine for now.\n")
                     sprint("You can see a entrance into the Building.\n")
                     input("Press ENTER to go to the entrance \n")
-                    sprint("You are now at the entrance, And to your suprise there are"
-                          "no Matrix Guards to be seen.\n")
+                    sprint("You are now at the entrance, And to your suprise"
+                          " there are no Matrix Guards to be seen.\n")
                     input("Press ENTER to go inside the Matrix Base \n")
                     break
 
             elif Move == 'b':
                 # Option cover the spikes
-                sprint("You carefully look around the top of the fence for something"
-                      "to help.\n")
-                sprint("To your luck you spot a little branch from the tree, You grab"
-                      "the Little Branch.\n")
-                sprint("It is not perfect, but it should work and prevent anything"
-                      "from happening.\n")
-                sprint("You climb over using the Branch as cover, avoiding the sharp"
-                      "points, and you make it to the other side safely!\n")
+                sprint("You carefully look around the top of the fence for"
+                      " something to help.\n")
+                sprint("To your luck you spot a little branch from the tree,"
+                      " You grab the Little Branch.\n")
+                sprint("It is not perfect, but it should work and prevent"
+                       " anything from happening.\n")
+                sprint("You climb over using the Branch as cover, avoiding the"
+                 " sharp points, and you make it to the other side safely!\n")
                 print(f"{ai}\n")
                 sprint("'Good thinking! You avoided injury.'\n")
                 sprint("You can see a entrance into the Building.\n")
                 input("Press ENTER to go to the entrance \n")
-                sprint("You are now at the entrance, And to your suprise there are no"
-                      "Matrix Guards to be seen.\n")
+                sprint("You are now at the entrance, And to your suprise there"
+                      " are no Matrix Guards to be seen.\n")
                 input("Press ENTER to go inside the Matrix Base \n")
                 break
 
@@ -1167,7 +1202,8 @@ while True:
         sprint("You decide to sneak towards the back entrance.\n")
         sprint("Keeping low to the ground, you move silently in the shadows.\n")
         sprint("As you get closer, you spot a Matrix Guard near the entrance.\n")
-        sprint("You will need to Deal with the Matrix Guard to Enter the Building."
+        sprint("You will need to Deal with the Matrix Guard to Enter the "
+               " Building."
                "\n")
 
         print("Do you :\n")
@@ -1176,8 +1212,8 @@ while True:
 
         while True:
             if Move == 'a':
-                sprint("You Find some Pebbles on the ground, You then use the Pebbles"
-                      "to distact the guard by throwing them.\n")
+                sprint("You Find some Pebbles on the ground, You then use the"
+                      " Pebbles to distact the guard by throwing them.\n")
                 sprint("You swiftly Begin Moving to the Entrance.\n")
                 Entrance_success = random.choice([True, False]) # Random chance for success
 
@@ -1185,51 +1221,58 @@ while True:
                     sprint("Luckily, You make it to the Entrance without getting"
                           "caught.\n")
                     input("Press ENTER to go inside the Matrix Base")
-                    sprint("You slip through the entrance unnoticed. Good work!\n")
+                    sprint("You slip through the entrance unnoticed. Good"
+                           " work!\n")
                     break
 
                 else:
-                    sprint("The Matrix Guard Heard one of your footsteps as you were"
-                          "moving.\n")
+                    sprint("The Matrix Guard Heard one of your footsteps as"
+                           " you were moving.\n")
                     print(f"{mg}\n")
                     sprint("'WHO ARE YOU!'\n")
                     print(f"{ai}\n")
                     sprint("The Matrix Guard is approaching you.\n")
                     sprint("Your back is faced towards him.\n")
-                    sprint("The Matrix Guard is Right Behind you now and is pointing"
-                          "a Gun at you.\n")
+                    sprint("The Matrix Guard is Right Behind you now and is"
+                          " pointing a Gun at you.\n")
 
                     print("Do you : \n")
-                    Move = get_valid_input("[A] Turn and Knock Out the Henchman using your"
-                        " Fists?\n[B] Turn and Reach for your Weapon to take him out?\n", ['a', 'b'])
+                    Move = get_valid_input("[A] Turn and Knock Out the Henchman"
+                     " using your Fists?\n[B] Turn and Reach for your Weapon to"
+                     " take him out?\n", ['a', 'b'])
 
                     while True:
                         if Move == 'a':
-                           sprint(f"{player.name} you turn around smoothly and give the"
-                                 "Matrix Guard a punch right on the nose.\n")
-                           sprint("The Matrix Guard was Instantly Knocked out Clean!\n")
+                           sprint(f"{player.name} you turn around smoothly and"
+                            " give the Matrix Guard a punch right on the nose."
+                            "\n")
+                           sprint("The Matrix Guard was Instantly Knocked out "
+                                  "Clean!\n")
                            print(f"{ai}\n")
                            sprint("What a Hit, I am Certainly Impressed. \n")
-                           sprint(f"{player.name} you must quickly tie up this body,"
-                                 "Then head into the Base. \n")
-                           input("Press ENTER to tie up the Matrix Guards Body \n")
-                           sprint("The Matrix Guards body has been dealt with.\n")
+                           sprint(f"{player.name} you must quickly tie up this"
+                                 " body, Then head into the Base. \n")
+                           input("Press ENTER to tie up the Matrix Guards Body"
+                                "\n")
+                           sprint("The Matrix Guards body has been dealt with."
+                                  "\n")
                            input("Press ENTER to go inside the Matrix Base \n")
                            break
 
                         elif Move == 'b':
-                            sprint("You Turned Around Smoothly, However as you reached for"
-                                  "your weapon.\n")
-                            sprint("The Matrix Guard fired right away, This instantly"
-                                  "knocked you out cold.\n")
-                            sprint("Later you woke up surrounded by Matrix Agents, "
-                                   "Captured.")
+                            sprint("You Turned Around Smoothly, However as you"
+                                   " reached for your weapon.\n")
+                            sprint("The Matrix Guard fired right away, This"
+                                   " instantly knocked you out cold.\n")
+                            sprint("Later you woke up surrounded by Matrix "
+                                   "Agents, Captured.")
                             sprint(f"'{player.name} you were so close! \n")
                             sprint("Mission Failed.")
                             exit()
                            
             elif Move == 'b':
-                sprint("You wait for the Matrix Guard to turn around and Knock him out clean.\n")
+                sprint("You wait for the Matrix Guard to turn around and Knock"
+                      " him out clean.\n")
                 input("Press ENTER to hide the Matrix Guard's Body.\n")
                 sprint("The Matrix Guards's Bod was hidden.\n")
                 input("Press ENTER to go inside the Matrix Base.\n")
@@ -1252,12 +1295,12 @@ while True:
     if Move == 'a':
         sprint("You take the staircase Upstairs.")
         sprint("However, there is a Matrix Guard.")
-        print(f"{player.name} you can use this as a opportunity to find out where"
-              " the Files room is.\n")
+        print(f"{player.name} you can use this as a opportunity to find out"
+             " where the Files room is.\n")
 
         print("Do you :\n")
-        Move = input("[A] Sneak up behind and point your weapon to his head?\n[B]"
-                     " Stay Hidden for abit and watch the guard?\n").lower()
+        Move = input("[A] Sneak up behind and point your weapon to his head?"
+                     "\n[B] Stay Hidden for abit and watch the guard?\n").lower()
 
         if Move == 'a':
             sprint("You sneak up to the guard from behind, moving as silently as"
@@ -1270,11 +1313,13 @@ while True:
             print(f"{mg}\n")
             sprint("'Please dont shoot me!' \n")
             sprint("'If you want to go to the files room, Go Downstairs '\n")
-            sprint("'then take a right and go down to the end of the corridor!'\n")
+            sprint("'then take a right and go down to the end of the corridor!'"
+                   "\n")
             sprint("'Now Please let me GO'\n")
             print(f"{player.name}:\n")
             sprint("'Not just Yet'\n")
-            input("Press ENTER to hit the Matrix Guard and make him unconscious.\n")
+            input("Press ENTER to hit the Matrix Guard and make him unconscious."
+                  "\n")
             sprint("The Matrix Guard is now unconscious. \n")
             input("Press ENTER to Hide the Matrix Guard. \n")
             sprint("The Matrix Guard is now hidden.\n")
@@ -1288,19 +1333,21 @@ while True:
             break
 
         elif Move == 'b':
-            sprint("You decide to stay hidden and observe the guard for a moment."
+            sprint("You decide to stay hidden and observe the guard for a"
+                  "moment."
                    "\n")
             sprint("The Matrix guard is now talking into his earpiece.\n")
             print(f"{mg}\n")
-            sprint("'Boss said im switching with you in 20 mins to guard the files"
-                   " room...'\n")
-            sprint("'I've never actually guarded the files rooom before ...'\n")
+            sprint("'Boss said im switching with you in 20 mins to guard the"
+                   " files room...'\n")
+            sprint("'I've never actually guarded the files rooom before ...'"
+                   "\n")
             sprint("'All i know is that its all the way downstairs and on the"
                     " right'\n")
             sprint("'Alright yes, I will be there in 30 mins'\n")
             print(f"{ai}\n")
             sprint(f"'{player.name}, I think today is your lucky day.'\n")
-            sprint("You hear the Matrix Guard mention something about a security "
+            sprint("You hear the Matrix Guard mention something about a security"
                    " shift change and the location of the Files room.\n")
             sprint("It looks like your patience paid off.\n")
             sprint("'You now know where to find the files room'\n")
@@ -1311,7 +1358,8 @@ while True:
 
         else:
             sprint("Invalid Choice, Choose a option!\n")
-            Move = input("[A] Sneak up behind and point your weapon to his head?\n[B]"
+            Move = input("[A] Sneak up behind and point your weapon to his "
+                         "head?\n[B]"
                      " Stay Hidden for abit and watch the guard?\n").lower()
 
     elif Move == 'b':
@@ -1324,47 +1372,50 @@ while True:
               " the Files room is. \n")
 
         print("Do you :\n")
-        Move = input("[A] Sneak up behind and point your weapon to his head?\n[B]"
-                    "Stay Hidden for abit and watch the guard?\n").lower()
+        Move = input("[A] Sneak up behind and point your weapon to his head?"
+                "\n[B] Stay Hidden for abit and watch the guard?\n").lower()
         while True:
             if Move == 'a':
-                sprint("You sneak up to the guard from behind, moving as silently as"
-                       " possible.\n")
-                sprint("You press your weapon to the back of his head and speak in a"
-                       " low voice.\n")
+                sprint("You sneak up to the guard from behind, moving as"
+                       " silently as possible.\n")
+                sprint("You press your weapon to the back of his head and speak"
+                      " in a low voice.\n")
                 print(f"{player.name}:\n")
                 sprint("'Where is the files room?' \n")
                 sprint("'You have 5 seconds to tell me or your dead!'\n")
                 print(f"{mg}\n")
                 sprint("'Please dont shoot me!' \n")
-                sprint("'The files room is on the right at the end of this corridor!"
+                sprint("'The files room is on the right at the end of this"
+                       " corridor!"
                        "'\n")
                 sprint("'Now Please let me GO'\n")
                 print(f"{player.name}:\n")
                 sprint("'Not just Yet'\n")
-                input("Press ENTER to hit the Matrix Guard and make him unconscious.\n")
+                input("Press ENTER to hit the Matrix Guard and make him"
+                      " unconscious.\n")
                 sprint("The Matrix Guard is now unconscious.\n")
                 input("Press ENTER to Hide the Matrix Guard.\n")
                 sprint("The Matrix Guard is now hidden.\n")
                 print(f"{ai}\n")
                 sprint("'Good Work there.'\n")
                 sprint("'You now know where to find the files room'\n")
-                sprint("'Go to the files room, Before the Matrix guard wakes up and"
-                       " the whole place is alerted!'\n")
+                sprint("'Go to the files room, Before the Matrix guard wakes"
+                      " up and the whole place is alerted!'\n")
     
             elif Move == 'b':
-                sprint("You decide to stay hidden and observe the guard for a moment."
-                       "\n")
+                sprint("You decide to stay hidden and observe the guard for"
+                      " a moment.\n")
                 sprint("The Matrix guard is now talking into his earpiece.\n")
                 print(f"{mg}\n")
-                sprint("'Boss said im switching with you in 20 mins to guard the...'\n")
+                sprint("'Boss said im switching with you in 20 mins to guard"
+                      " the...'\n")
                 sprint("'Thats Alright, I can tell you where it is ...'\n")
-                sprint("'The files room is here, Downstairs and on the right at the"
-                       " end of the corridor'\n")
+                sprint("'The files room is here, Downstairs and on the right "
+                       "at the end of the corridor'\n")
                 print(f"{ai}\n")
                 sprint(f"'{player.name}, I think today is your lucky day.'")
-                sprint("You hear the Matrix Guard mention something about a security"
-                       " shift change and the location of the Files room.\n")
+                sprint("You hear the Matrix Guard mention something about a "
+                "security shift change and the location of the Files room.\n")
                 sprint("It looks like your patience paid off.\n")
                 sprint("'You now know where to find the files room'\n")
                 sprint("'Hurry and get to the files room'\n")
@@ -1372,13 +1423,13 @@ while True:
 
             else:
                 sprint("Invalid Choice, Choose a option!\n")
-                Move = input("[A] Sneak up behind and point your weapon to his head?\n[B]"
-                    "Stay Hidden for abit and watch the guard?\n").lower()
+                Move = input("[A] Sneak up behind and point your weapon to his"
+                " head?\n[B] Stay Hidden for abit and watch the guard?\n").lower()
 
     else:
         sprint("Invalid Choice, Choose a option!\n")
-        Move = input("[A] Take the Staircase Upstairs?\n[B] Take the Staircase "
-             "Downstairs?\n").lower()
+        Move = input("[A] Take the Staircase Upstairs?\n[B] Take the Staircase"
+             " Downstairs?\n").lower()
 
         
 # Gettng inside the files room
@@ -1392,14 +1443,15 @@ sprint(f"{player.name}, You must quickly Bypass the door and get inside.\n")
 
 # Hacking Mini Game
 input("Press ENTER to hack the door.\n")
-hack_door
+hacking_success = hack_door()
 
-if hack_door():
+if hacking_success:
     sprint("You successfully hacked the door and gained access!\n")
     sprint("The scanner lights turn green. The door hisses open.\n")
     input("Press ENTER to go inside the File Room \n")
     print(f"{ai}\n")
     sprint("'You truly are one of the best.'\n")
+    
 else:
     sprint("You failed to hack the door. Security is alerted! \n")
     print(f"{ai} \n")
@@ -1407,28 +1459,34 @@ else:
     sprint("Mission Failed.\n")
     exit()
 
-sprint(f"{player.name}, You are nearly there, The fate of the world might just be in good hands after all! \n")
+sprint(f"{player.name}, You are nearly there, The fate of the world might just"
+      " be in good hands after all! \n")
 sprint("Now quick, you must find the stick With the Data and Leave! \n")
 
 print("Do you: \n")
-Move = input("[A] Search The Computer Desk for the Stick?\n[B] Search the Lockers for the Stick?\n").lower()
+Move = input("[A] Search The Computer Desk for the Stick?\n[B] Search the"
+             " Lockers for the Stick?\n").lower()
 
 # Searching the Computer
 if Move == 'a':
-    sprint("You Search everywhere on the Computer desk for the drive, However it is not visible \n")
+    sprint("You Search everywhere on the Computer desk for the drive, However"
+          " it is not visible \n")
 
     print("Do you: \n")
-    Move = input("[A] Search the Lockers for the Stick?\n[B] Look around the room Hoping to Find it?\n").lower()
+    Move = input("[A] Search the Lockers for the Stick?\n[B] Look around the"
+                " room Hoping to Find it?\n").lower()
 
     if Move == 'a':
-        sprint("You look in the lockers, But the stick is still not visible. \n")
-        sprint("All you can really do now is look around the room and hope for the best. \n")
+        sprint("You look in the lockers, But the stick is still not visible."
+               "\n")
+        sprint("All you can really do now is look around the room and hope for"
+              " the best. \n")
         sprint("Time is really Running out ... \n")
         input("Press ENTER to look around the room \n")
         sprint("you are looking around desperately now, When ... \n")
         sprint("CLICK ... \n")
         sprint("You Stepped on a button which triggered a Hidden door.\n")
-        sprint("On the other side of the Door is a Vault. \n")
+        sprint("On the other side of the Door is a Vault.\n")
 
 
     elif Move == 'b':
@@ -1439,18 +1497,22 @@ if Move == 'a':
 
     else:
         sprint("Invalid Output!\n")
-        Move = input("[A] Search the Lockers for the Stick?\n[B] Look around the room Hoping to Find it?\n").lower()
+        Move = input("[A] Search the Lockers for the Stick?\n[B] Look around"
+                     " the room Hoping to Find it?\n").lower()
 
 # Searching the Computer
 elif Move == 'b':
     sprint("You look in the lockers, But the stick is still not visible. \n")
 
     print("Do you: \n")
-    Move = input("[A] Search The Computer Desk for the Stick?\n[B] Look around the room Hoping to Find it?\n").lower()
+    Move = input("[A] Search The Computer Desk for the Stick?\n[B] Look around"
+                " the room Hoping to Find it?\n").lower()
 
     if Move == 'a':
-         sprint("You Search everywhere on the Computer desk for the drive, However the stick is still not visiible.\n")
-         sprint("All you can really do now is look around the room and hope for the best. \n")
+         sprint("You Search everywhere on the Computer desk for the drive, "
+                "However the stick is still not visiible.\n")
+         sprint("All you can really do now is look around the room and hope "
+                "for the best. \n")
          sprint("Time is really Running out ... \n")
          input("Press ENTER to look around the room \n")
          sprint("you are looking around desperately now, When ... \n")
@@ -1466,13 +1528,15 @@ elif Move == 'b':
 
     else:
         sprint("Invalid Output!\n")
-        Move = input("[A] Search The Computer Desk for the Stick?\n[B] Look around the room Hoping to Find it?\n").lower()
+        Move = input("[A] Search The Computer Desk for the Stick?\n[B] Look "
+                     "around the room Hoping to Find it?\n").lower()
 
 
 # Getting into the Vault to get the Stick
 print(f"{ai}\n")
 sprint("'Of Course they put the stick in a Vault!' \n")
-sprint(f"'{player.name} i guess you are going to need to use your hacking skills again.'\n")
+sprint(f"'{player.name} i guess you are going to need to use your hacking "
+       "skills again.'\n")
 sprint("Hack the pin of the Vault and retrieve the Stick.\n")
 sprint("Hurry, You dont have much time left now.\n")
 
@@ -1481,16 +1545,17 @@ sprint("You are now infront of the vault.\n")
 input("Press ENTER to hack into the Vault.\n")
 
 # Second Hacking Game
-hack_vault
+hacking1_success = hack_vault()
 
-if hack_vault():
+if hacking1_success:
     sprint("You successfully hacked the Vault and gained access!\n")
     sprint("The Vault Door Slowly Opens\n")
     input("Press ENTER to go inside the Vault.\n")
     print(f"{ai}\n")
     sprint("'Wow. That was easy for you.'\n")
 else:
-    sprint("You failed to hack the vault. The stick was not retrieved. Building was alerted!\n")
+    sprint("You failed to hack the vault. The stick was not retrieved. Building"
+          " was alerted!\n")
     print(f"{ai} \n")
     sprint(f"'All for Nothing.'\n")
     sprint("Mission Failed.\n")
@@ -1500,21 +1565,28 @@ else:
 sprint(f"Good Job {player.name}, Now Find the Stick \n")
 input("Press ENTER to look in the vault for stick.\n")
 
-sprint("You look around the vault for the stick, But there is just a Load of files and duffle bags.\n")
-sprint("You are about to give up, But you come to the end of the vault and see a Stand with the Stick displayed on it.\n")
+sprint("You look around the vault for the stick, But there is just a Load of "
+       "files and duffle bags.\n")
+sprint("You are about to give up, But you come to the end of the vault and see"
+      " a Stand with the Stick displayed on it.\n")
 sprint("At Last!, you have found the Stick.\n")
 
 input("Press ENTER to Get the Stick. \n")
-sprint(f"As you grab the Stick, an alarm suddenly blares throughout the building!\n")
-sprint("Red lights start flashing, and a loud siren echoes through the vault.\n")
+sprint(f"As you grab the Stick, an alarm suddenly blares throughout the "
+       "building!\n")
+sprint("Red lights start flashing, and a loud siren echoes through the vault."
+       "\n")
 
+# Middle Scene
 print(f"{ai}\n")
-sprint(f"'Oh no, {player.name}! You've triggered an alarm! You need to get out of there fast!'\n")
-sprint("'You have come this far, You must Escape from the Matrix Base and Get to your car'\n")
+sprint(f"'Oh no, {player.name}! You've triggered an alarm! You need to get out"
+      " of there fast!'\n")
+sprint("'You have come this far, You must Escape from the Matrix Base and Get"
+      " to your car'\n")
 
-input("Press ENTER to leave the vault and the File room.")
-sprint("You have left the vault and the File room.")
-input("Press ENTER to run down the corridor to the staircase")
+input("Press ENTER to leave the vault and the File room.\n")
+sprint("You have left the vault and the File room.\n")
+input("Press ENTER to run down the corridor to the staircase.\n")
 sprint("You are now at the Staircase.\n")
 input("press ENTER to run upstairs to the exit.\n")
 sprint("You are now at the exit.\n")
@@ -1566,18 +1638,18 @@ class Matrix_Agents:
     # Matrix Agents Weapon attack
     def attack(self,target):
         target.HP -= self.strength
-        print("You have been punched by the Matrix Agent. \n")
+        print("You have been punched by the Matrix Agent.\n")
 
     # Matrix Agent Weapon Attack
     def weapon2_attack(self,target):
-        print("You have dealt damage with a Matrix Rifle! \n")
+        print("You have dealt damage with a Matrix Rifle!\n")
         target.HP -= self.weapon.damage
 
     # Matrix Agents Health Check
     def health_check(self):
         print("Matrix Agent health check :\n", self.HP)
         if self.HP <= 0:
-            sprint("You have terminated a Matrix Agent. \n\n")
+            sprint("You have terminated a Matrix Agent.\n\n")
             player.HP += random.randrange(54, 60)
             battle = False
 
@@ -1641,7 +1713,8 @@ while battle==True:
                 sprint(f"Inavild Escape, You cannot run from this "
                        f"{player.name}. \n")
                 sprint("Choose your Move: \n")
-                Move = input("[A] Attack with Weapon\n[B] Attack with strength"
+                Move = input("[A] Attack with Weapon\n[B] Attack with "
+                             "strength"
                              "\n\n").lower() 
 
         # Matrix Guard Attacking
@@ -1752,7 +1825,8 @@ sprint("'We have a big problem'\n")
 sprint("'The guy is not normal.'\n")
 sprint("'Forgive me if i fail.'\n")
 
-sprint("The Last Matrix Agent pulls out a Matrix Rifle and starts spraying bullets in your direction.\n")
+sprint("The Last Matrix Agent pulls out a Matrix Rifle and starts spraying "
+       "bullets in your direction.\n")
 print(f"{player.name}, your health is currently {player.HP}.\n")
 
 
@@ -1799,12 +1873,14 @@ while battle==True:
             break
     break
 
-sprint(f"'{player.name} YOU HAVE JUST ACCOMPLISHED SOMETHING WHICH HAS NEVER BEEN DONE BEFORE!\n'")
+sprint(f"'{player.name} YOU HAVE JUST ACCOMPLISHED SOMETHING WHICH HAS NEVER"
+      " BEEN DONE BEFORE!\n'")
 sprint("Morpheus would be so proud right now.\n")
 sprint("'Two Matrix Agents Wiped out like nothing'\n")
 sprint("'Its Like Nothing is in your way.'\n")
 sprint("'Jeez, There is so much i could say right now.'")
-sprint("However this is not over just yet, You are still in the Matrix Compound.")
+sprint("However this is not over just yet, You are still in the Matrix "
+       "Compound.")
 sprint("Get to your car quick and Contact Morpheus.\n")
 sprint("Its's Time to put an end to The Matrix!\n")
 
@@ -1815,8 +1891,11 @@ sprint("You are now at outside of your car.\n")
 input("Press ENTER to get inside your car.\n")
 sprint(f"You are now inside the {player.car.model}.\n")
 
+
+# Last Scene
 print(f"{ai}\n")
-sprint("Great!, You made it to your car safe and sound, Now contact Morpheus and Finish this B*TCH.\n")
+sprint("Great!, You made it to your car safe and sound, Now contact Morpheus"
+      " and Finish this B*TCH.\n")
 input("Press ENTER to call Morpheus.\n")
 
 print(f"{npc}\n")
@@ -1830,10 +1909,13 @@ sprint(f"Now, where are you {player.name}?\n")
 print(f"{player.name}:\n")
 sprint("Im Near the Matrix Base.\n")
 print(f"{npc}\n")
-sprint("Okay okay, Now listen, We still have to upload the files to Finish this off.\n")
+sprint("Okay okay, Now listen, We still have to upload the files to Finish this"
+      " off.\n")
 sprint("I will send you the location of my safehouse right now.\n")
-sprint("Get here as fast as you can, And make sure you are not being followed.\n")
-sprint("The Matrix Will be searching for you with their full force, So this is not over just yet.\n")
+sprint("Get here as fast as you can, And make sure you are not being followed"
+       ".\n")
+sprint("The Matrix Will be searching for you with their full force, So this is"
+      " not over just yet.\n")
 sprint(f"You've done me proud {player.name}.\n")
 sprint("Now Get to my location fast.\n")
 
@@ -1845,6 +1927,7 @@ sprint("No time to stare, Now DRIVE!\n")
 
 input("Press ENTER to drive.\n")
 sprint(f"You are now driving the {player.car.model}.\n")
+player.car.drive(100)
 
 sprint("Time : 11:40pm")
 sprint("Location : Somwhere in California\n")
@@ -1874,28 +1957,32 @@ sprint("DON'T GIVE IT!\n")
 
 print(f"{ai}\n")
 sprint("'This is a mess.'\n")
-sprint(f"{player.name} Agent Myth somehow found out the Safehouse location and knew you were going to be there.\n")
+sprint(f"{player.name} Agent Myth somehow found out the Safehouse location and"
+      " knew you were going to be there.\n")
 sprint("However there is no time to think about that now!\n")
 sprint("Agent Myth is holding a gun to Morpheus's head.\n")
 sprint("You cannot give the stick to him no matter what!\n")
 sprint("The World is at your hands.\n")
 
-sprint("Agent Myth may be the best the Matrix has, However he is just a human after all.\n")
+sprint("Agent Myth may be the best the Matrix has, However he is just a human"
+      " after all.\n")
 sprint(f"I belive you can outsmart him {player.name}.\n")
 sprint("Your next decision could determine mankind fate.\n")
 
 print("Now make your move.\n")
 print("Do you: \n")
 
-Move = input("[A] Toss the Stick On the Floor.\n[B] Hand him the Stick then Knock him out.\n\n").lower()
+Move = input("[A] Toss the Stick On the Floor.\n[B] Hand him the Stick then "
+             "Knock him out.\n\n").lower()
 
 while True:
     if Move == 'a':
         print(f"{player.name}:\n")
-        sprint("Fine Take the Stick!\n")
-        sprint("You Toss the Stick on the Floor, And Agent Myth instantly reaches for the Stick!\n")
+        sprint("'Fine Take the Stick!'\n")
+        sprint("You Toss the Stick on the Floor, And Agent Myth instantly "
+               "reaches for the Stick!\n")
         print(f"{npc}\n")
-        sprint("Take That B*TCH!\n")
+        sprint("'Take That B*TCH!'\n")
         print(f"{ai}\n")
         sprint("Morpheus Kicks Agent Myth as he reaches for the Stick.\n")
         sprint("This is it!, The Final Battle ...\n")
@@ -1914,16 +2001,17 @@ while True:
 
     else:
         sprint("Invalid Move, Make your Move!\n")
-        Move = input("[A] Toss the Stick On the Floor.\n[B] Hand him the Stick then Knock him out.\n\n").lower()
+        Move = input("[A] Toss the Stick On the Floor.\n[B] Hand him the Stick"
+                    " then Knock him out.\n\n").lower()
 
 
 agent_myth = Agent_Myth("Agent Myth")
 
 input("Press ENTER to Fight Agent Myth.\n")
-sprint("FINAL BATTLE\n")
+sprint("=== FINAL BATTLE ===\n")
 
 sprint(f"{player.name}, Your current health is {player.HP}.")
-sprint(f"Agent Myth's health is {agent_myth.HP}.")
+sprint(f"Agent Myth's health is {agent_myth.HP}.\n")
 
 
 while battle==True:
@@ -1947,6 +2035,7 @@ while battle==True:
              Move = input("[A] ?????\n[B] ?????"
                      "\n\n").lower()
              
+        # Myth's Turn to Attack
         Agent_Myth_choice = random.randint(1, 2)
 
         if Agent_Myth_choice == 1:
@@ -1966,18 +2055,18 @@ while battle==True:
 
         # The Myth
         if agent_myth.HP <= 0:
-           break
-    break
+           break # Exit the inner Loop
+    break # Exit the Battle Loop
 
-sprint("Mission Accomplished.\n")
+sprint("\n=== MISSION ACCOMPLISHED ===\n")
 
-print(f"{npc}")
+print(f"{npc}\n")
 sprint("Thats it, Youv've Done it!!\n")
 
 print(f"{ai}\n")
 sprint("YOU'VE DONE IT!!!\n")
 sprint("The Matrix has been Defeated.")
-sprint("The World is now saved.")
+sprint("The fate of the World is now saved.")
 
 
 # Add ascii Art
