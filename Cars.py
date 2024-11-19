@@ -1,13 +1,6 @@
-import sys,time
-
-def sprint(str):
-   for c in str + '\n':
-     sys.stdout.write(c)
-     sys.stdout.flush()
-     time.sleep(0./9)
-
 # Creating The Blueprint for the Cars
 # Using COMPOSITION
+
 class Engine:
     def __init__(self, engine, horse_power):
         self.engine = engine
@@ -30,7 +23,7 @@ class Car:
         self.horse_power = horse_power
         self.wheels =[Wheel(wheel_size)for wheel in range(4)]
         self.tyre = tyre
-        self.fuel_level = fuel_level  # Adding a float for fuel level (default is 40.0)
+        self.fuel_level = fuel_level
 
 # Choosing what i want it to appear like
     def display_car(self):
@@ -51,7 +44,7 @@ class Car:
 
     def refill_fuel(self):
         while True:
-            decision = input("Do you want to stop at the next fuel station and refill your tank?\n[Y] Yes\n[N] No\n").lower()
+            decision = input("Do you want to stop at the next fuel station and refill your tank?\n[Y]Yes\n[N] No\n").lower()
             if decision == 'y':
                 self.fuel_level = 40.0  # Refill the tank to full (40 liters)
                 print(f"Your tank is now full with {self.fuel_level} liters of fuel!\n")
