@@ -1,8 +1,8 @@
-﻿from cc import * 
+from cc import * 
 from Wpns import *
 
 
-                                                                                    ## ALL THE BATTLES - THE MATRIX ##
+ ## ALL THE BATTLES - THE MATRIX ##
 
 battle = True
 
