@@ -2,7 +2,7 @@ import random
 
 from cc import *
 
-                                                            ## ALL THE 'SCENES' - MATRIX BASE AND COMPOUND ##
+## ALL THE 'SCENES' - MATRIX BASE AND COMPOUND ##
 
 
 
