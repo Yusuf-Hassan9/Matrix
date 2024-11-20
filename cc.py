@@ -1,7 +1,9 @@
 from Fnc import *
 from Wpns import *
 
-import random                                                             ## ALL CHARCACTER CLASSES - THE MATRIX ##
+import random                                                            
+
+## ALL CHARCACTER CLASSES - THE MATRIX ##
 
 class Character:
     def __init__(self, name, HP, strength):
@@ -230,6 +232,7 @@ for i in range(2):
 matrix_guard = Matrix_Guard("Matrix Guard")
 
 player = Character(input("What is your name player :\n "), 100 , 25)
+
 
 # Looping Until Player name is given
 while player.name == "":
