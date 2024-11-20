@@ -3,7 +3,7 @@ import random
 from cc import *
 from Cars import *
 
-                                                                      ## CAR SCENARIOS - THE MATRIX ##
+ ## CAR SCENARIOS - THE MATRIX ##
                  
 
 
