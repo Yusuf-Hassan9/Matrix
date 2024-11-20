@@ -1,10 +1,10 @@
 import random
 
-                                                                         ## ALL WEAPON CLASSES - THE MATRIX ##
+## ALL WEAPON CLASSES - THE MATRIX ##
 
+# PLAYER WEAPONS #
 
-
-class Weapon1:                         # PLAYER WEAPONS #
+class Weapon1:
     
     def __init__(self, name):
         
@@ -27,9 +27,9 @@ class Weapon1:                         # PLAYER WEAPONS #
                 self.damage = 20
 
 
+# ENEMY WEAPONS #
 
-
-class Weapon2:                         # ENEMY WEAPONS # 
+class Weapon2:                          
     
     def __init__(self, name):
 
