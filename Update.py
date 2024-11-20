@@ -1,10 +1,14 @@
+#####################################################
+## THE MATRIX PROJECT - TEXT BASED ADVENTURE GAME  ##
+#####################################################
+
 # Importing all the modules to operate THE MATRIX
 import random
 
 from cc import *
-from Cars import *          ####################################################
-from Hg import *            ## THE MATRIX PROJECT - TEXT BASED ADVENTURE GAME ##
-from cs import *            ####################################################
+from Cars import *   
+from Hg import *
+from cs import*
 from Mb import *
 from Bttle import *
 
@@ -356,21 +360,21 @@ Infiltration()
 
 # Hacking Mini Game
 input("Press ENTER to hack the door.\n")
-# hacking_success = hack_door()
+hacking_success = hack_door()
 
-# if hacking_success:
-#     sprint("You successfully hacked the door and gained access!\n")
-#     sprint("The scanner lights turn green. The door hisses open.\n")
-#     input("Press ENTER to go inside the File Room \n")
-#     print(f"{ai}\n")
-#     sprint("'You truly are one of the best.'\n")
+if hacking_success:
+    sprint("You successfully hacked the door and gained access!\n")
+    sprint("The scanner lights turn green. The door hisses open.\n")
+    input("Press ENTER to go inside the File Room \n")
+    print(f"{ai}\n")
+    sprint("'You truly are one of the best.'\n")
     
-# else:
-#     sprint("You failed to hack the door. Security is alerted! \n")
-#     print(f"{ai} \n")
-#     sprint(f"'Disapponting.'\n")
-#     sprint("Mission Failed.\n")
-#     exit()
+else:
+    sprint("You failed to hack the door. Security is alerted! \n")
+    print(f"{ai} \n")
+    sprint(f"'Disapponting.'\n")
+    sprint("Mission Failed.\n")
+    exit()
 
 sprint(f"{player.name}, You are nearly there, The fate of the world might just"
       " be in good hands after all! \n")
@@ -380,21 +384,21 @@ enter()
 DataStick()
 
 # Second Hacking Game
-# hacking1_success = hack_vault()
+hacking1_success = hack_vault()
 
-# if hacking1_success:
-#     sprint("You successfully hacked the Vault and gained access!\n")
-#     sprint("The Vault Door Slowly Opens\n")
-#     input("Press ENTER to go inside the Vault.\n")
-#     print(f"{ai}\n")
-#     sprint("'Wow. That was easy for you.'\n")
-# else:
-#     sprint("You failed to hack the vault. The stick was not retrieved. Building"
-#           " was alerted!\n")
-#     print(f"{ai} \n")
-#     sprint(f"'All for Nothing.'\n")
-#     sprint("Mission Failed.\n")
-#     exit()
+if hacking1_success:
+    sprint("You successfully hacked the Vault and gained access!\n")
+    sprint("The Vault Door Slowly Opens\n")
+    input("Press ENTER to go inside the Vault.\n")
+    print(f"{ai}\n")
+    sprint("'Wow. That was easy for you.'\n")
+else:
+    sprint("You failed to hack the vault. The stick was not retrieved. Building"
+          " was alerted!\n")
+    print(f"{ai} \n")
+    sprint(f"'All for Nothing.'\n")
+    sprint("Mission Failed.\n")
+    exit()
 
 # Getting the Stick Then Leaving.
 sprint(f"Good Job {player.name}, Now Find the Stick \n")
@@ -654,6 +658,7 @@ sprint("YOU'VE DONE IT!!!\n")
 sprint("The Matrix has been Defeated.")
 sprint("The fate of the World is now saved.")
 
-# Comment every line
+# Comment every line which needs explaining
 # Adjust sprint time
+# Remove anu uneccessary lines
 # Last - Any extra decoration
