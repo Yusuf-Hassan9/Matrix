@@ -15,8 +15,8 @@ def Gettinin(): # Getting into the Matrix Base Compound Scene #
         if Move1 == 'a':
             # Fence Approach
             sprint("You begin climbing the Fence behind the Container.\n")
-            sprint("You find yourself in a situation as you get to the top of the"
-                   " Fence.\n")
+            sprint("You find yourself in a situation as you get to the top of "
+                   "the Fence.\n")
             sprint("The fence is lined with sharp spikes, something you had not"
                    " noticed before.\n")
             sprint("There is no turning back now!\n")

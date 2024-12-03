@@ -77,9 +77,11 @@ class Character:
                 self.increase_hp(HP_increase)
             else:
                 print("\nInvalid choice. Please select a valid item number.\n")
+                player.visit_supermarket()
 
         except ValueError:
             print("\nInvalid input. Please enter a number.\n")
+            player.visit_supermarket()
 
 class Henchman:
     def __init__(self, name):
@@ -237,6 +239,6 @@ player = Character(input("What is your name player :\n "), 100 , 25)
 # Looping Until Player name is given
 while player.name == "":
     print("Invalid Option \n")
-    player.name = input("what is your name player:\n ")
+    player.name = input("\n What is your name player:\n ")
 else:
-    sprint(f"Welcome To the Matrix {player.name} \n")
+    sprint(f"\n\n Welcome To the Matrix {player.name} \n\n")

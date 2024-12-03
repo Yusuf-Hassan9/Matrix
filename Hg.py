@@ -9,14 +9,13 @@ def hack_door():
     correct_guesses = 0  # Track the number of consecutive correct guesses
 
     # Display instructions with enhanced formatting
-    sprint("\n" + "=" * 60)
+    print("\n" + "=" * 60)
     sprint("          HACKING : THE SECURITY LOCK")
-    sprint("=" * 60)
+    print("=" * 60)
     sprint("\n> You need to guess the 3-digit code one digit at a time.")
     sprint("> Each digit is between 1 and 4. You must guess the digits in order.")
-    sprint("> Guess correctly three times in a row to unlock the door.\n")
-    sprint(f"> Unique attempts: Digit 1: {attempts_per_digit[0]}, Digit 2: {attempts_per_digit[1]}, Digit 3: {attempts_per_digit[2]}\n")
-    sprint("=" * 60 + "\n")
+    sprint("> Guess all digits correctly to unlock the door.\n")
+    print("=" * 60 + "\n")
 
     # Main game loop for each digit
     for digit_index in range(3):
@@ -49,15 +48,15 @@ def hack_door():
                 break  # Break out of the attempts loop for the next digit
 
             else:
-                sprint("\n" + "=" * 60)
+                print("\n" + "=" * 60)
                 sprint(f"[ACCESS DENIED] Digit {digit_index + 1} is incorrect.")
-                sprint("=" * 60 + "\n")
+                print("=" * 60 + "\n")
 
             # If the player runs out of attempts for the current digit
             if attempt == attempts:
-                sprint("\n" + "#" * 60)
+                print("\n" + "#" * 60)
                 sprint(f"###   FAILURE! YOU'VE USED ALL ATTEMPTS FOR DIGIT {digit_index + 1}.   ###")
-                sprint("#" * 60 + "\n")
+                print("#" * 60 + "\n")
                 return False  # Hacking failed
 
         if correct_guesses == 3:  #End any loops
@@ -78,14 +77,13 @@ def hack_vault():
     correct_guesses = 0  # Track the number of consecutive correct guesses
 
     # Display instructions with enhanced formatting
-    sprint("\n" + "=" * 60)
+    print("\n" + "=" * 60)
     sprint("        HACKING : THE VAULT")
-    sprint("=" * 60)
+    print("=" * 60)
     sprint("\n> You need to guess the 4-digit code one digit at a time.")
     sprint("> Each digit is between 1 and 4. You must guess the digits in order.")
-    sprint("> Guess correctly four times in a row to unlock the Vault.\n")
-    sprint(f"> Unique attempts: Digit 1: {attempts_per_digit[0]}, Digit 2: {attempts_per_digit[1]}, Digit 3: {attempts_per_digit[2]}, Digit 4: {attempts_per_digit[3]}\n")
-    sprint("=" * 60 + "\n")
+    sprint("> Guess all digits to unlock the Vault.\n")
+    print("=" * 60 + "\n")
 
     # Main game loop for each digit
     for digit_index in range(4):
@@ -130,7 +128,7 @@ def hack_vault():
                 return False  # Hacking failed
 
     # If the player successfully guesses all digits
-    sprint("\n" + "#" * 60)
+    print("\n" + "#" * 60)
     sprint("###   SUCCESS! THE VAULT IS UNLOCKED AND YOU GAIN ACCESS.   ###")
-    sprint("#" * 60 + "\n")
+    print("#" * 60 + "\n")
     return True  # Hacking succeeded

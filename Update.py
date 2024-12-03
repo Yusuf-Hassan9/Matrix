@@ -6,7 +6,7 @@
 import random
 
 from cc import *
-from Cars import *   
+from Cars import *
 from Hg import *
 from cs import*
 from Mb import *
@@ -19,8 +19,8 @@ start=True  # Allowing the exit function to work
 # Asking the player if they want to play the game
 answer = input("Would You like to Take on the Matrix: yes or no \n").lower()
 if answer == "yes":
-    sprint("Game Loading.... Game Loading.... Game Loading.... Game Loading..."
-           ".\n")
+    sprint("\n\n Game Loading.... Game Loading.... Game Loading.... Game Loading..."
+           ".\n\n")
 
 elif answer == "No":
     sprint("Maybe Next time")
@@ -31,7 +31,6 @@ else:
     answer = input("Would You like to Take on the Matrix: Yes or No \n")
 
 
-
 print(f"{ai}\n")
 sprint(f"{player.name}, You are an Elite Hacker and a key member of the"
        " organization The Real World.\n")
@@ -39,12 +38,12 @@ sprint("For the past few years you have been working to end the"
       " tyranny of The Matrix and" 
        " Their evil plans to take control over the world.\n") 
 sprint("The Real World have finally gathered enough data to finally end the"
-      " corruption of The Matrix. However just today ...\n")
+      " corruption of The Matrix. However just today ...\n\n")
 
 enter()
 
 sprint("Time : 11:00am ")
-sprint("Location : 9291 Burton Way, Beverly Hills\n")
+sprint("Location : 9291 Burton Way, Beverly Hills\n\n")
 
 # The Fisrt Speech
 print(f"{npc}\n")
@@ -72,10 +71,10 @@ sprint("'You must Grab one of the Cars from the Location and Locate then head"
 sprint("'Once you Retrieve the files from The Matrix you can contact me through"
        " this network and i will tell you where to meet me'\n")
 sprint("'Good luck; our fate hinges on your success.'\n")
-sprint("'Remember, no pressure!'\n")
+sprint("'Remember, no pressure!'\n\n")
 
 print(f"{npc}\n")
-sprint("Car Location : 155 N Crescent Dr, Beverly Hills\n")
+sprint("Car Location : 155 N Crescent Dr, Beverly Hills\n\n")
 
 # Storyline
 print(f"{hman}\n")
@@ -199,6 +198,8 @@ print(f"{player.name}: \n")
 sprint("'Fine,you choose Pain'\n")
 print(f"{ai}\n")
 sprint(f"Make your decision Wisely {player.name} :\n")
+
+
 Move6 = input("[A] Get Henchman to talk by Waterboarding Him \n[B] Get"
               " Henchman to talk by Lighting him on Fire\n").lower()
 while True:
@@ -383,7 +384,7 @@ sprint("Now quick, you must find the stick With the Data and Leave! \n")
 enter()
 DataStick()
 
-# Second Hacking Game
+#Second Hacking Game
 hacking1_success = hack_vault()
 
 if hacking1_success:
@@ -660,5 +661,4 @@ sprint("The fate of the World is now saved.")
 
 # Comment every line which needs explaining
 # Adjust sprint time
-# Remove anu uneccessary lines
 # Last - Any extra decoration

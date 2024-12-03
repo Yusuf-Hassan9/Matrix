@@ -40,8 +40,8 @@ def scenario():
             elif Move7 == 'c':
                 player.car = Car3
                 sprint("Ahh, the Porsche 911 GT3 RS. A true track weapon!\n")
-                sprint(f"Excellent choice, {player.name}! It's built for speed and"
-                      " precision.\n")
+                sprint(f"Excellent choice, {player.name}! It's built for speed"
+                      " and precision.\n")
                 break
 
             elif Move7 == 'd':
@@ -54,9 +54,9 @@ def scenario():
 
             else:
                 print("Invalid choice. Please select a car from the options.\n")
-                Move7 = input("[A] BMW M5 CS F90 \n[B] Mercedes C63 AMG W204 \n[c]"
-                             " Porsche"
-                             " 911 GT3 RS 997 \n[D] Nissan GT-R R35 \n\n").lower()
+                Move7 = input("[A] BMW M5 CS F90 \n[B] Mercedes C63 AMG W204 "
+                              "\n[c] Porsche 911 GT3 RS 997 \n[D] Nissan GT-R"
+                              " R35 \n\n").lower()
 
 
     input("Press ENTER to get in your car and continue the mission.\n")
@@ -76,11 +76,11 @@ def scenario():
         sprint("Time: 3:00 pm")
         sprint("Location: The Highway\n")
         sprint("Your now Entering The highway ..., Everything seems fine ...\n")
-        sprint(" As soon as you hit the highway, Two dark sedans from the Matrix"
-              " agents start tailing you. You punch the gas, and the 627 BHP roars"
-              " to life.")
-        sprint("The Matrix agents are struggling to keep up, but they are closing "
-               "in. \n")
+        sprint(" As soon as you hit the highway, Two dark sedans from the"
+              " Matrix agents start tailing you. You punch the gas, and the 627"
+              " BHP roars to life.")
+        sprint("The Matrix agents are struggling to keep up, but they are"
+              " closing in. \n")
         sprint(" Do you:\n")
         Move = input("[A] Floor it and try to outpace them?\n[B] Get off the"
                     " Highway into Backstreets at the next exit and then Try to"
@@ -100,8 +100,8 @@ def scenario():
                 elif Move == 'b':
                     sprint("You get off the Highway, turn into the backstreets,"
                           " and thanks"
-                          " to the M5 handling, you swiftly lose one of the Sedans"
-                          " in the maze of alleys.")
+                          " to the M5 handling, you swiftly lose one of the "
+                          "Sedans in the maze of alleys.")
                     player.car.drive(30)
                     sprint("You are feeling Hungry and there is a Supermarket"
                           " Right Next to you, However you know that time is"
@@ -117,9 +117,10 @@ def scenario():
                             sprint("I guess someone is Hungry\n")
                             input("Press ENTER to go inside the supermarket\n")
                             player.visit_supermarket()
-                            sprint(f"{player.name} Now that you are Re-Energized,"
-                                  " You now need to continue on with your Journey"
-                                 " Quickly, However you have 2 route options\n")
+                            sprint(f"{player.name} Now that you are "
+                             "Re-Energized, You now need to continue on with"
+                             " your Journey Quickly, However you have 2 route"
+                             " options\n")
 
                             sprint("Do You:")
                             Move =  input("[A] Head Back onto the Highway?\n"
@@ -130,32 +131,33 @@ def scenario():
                                                f"{player.name}")
                                         sprint("Time: 3:40 pm")
                                         sprint("Location: The Highway\n")
-                                        sprint("Its going to be one nice long road"
-                                              " down to California\n")
+                                        sprint("Its going to be one nice long "
+                                               "road down to California\n")
                                         player.car.drive(240)
                                         break
 
                                     elif Move == 'b':
-                                        sprint("I Guess you just love Twist And"
-                                              " Turns\n")
+                                        sprint("I Guess you just love Twist "
+                                               "And Turns\n")
                                         sprint("Time: 3:40 pm")
                                         sprint("Location: Backroads\n")
-                                        sprint("This is going To be a long trip to"
-                                              " California\n")
+                                        sprint("This is going To be a long "
+                                               "trip to California\n")
                                         sprint("Your Fuel is going to take a"
                                               " massive hit for sure\n")
                                         player.car.drive(330)
                                         break
 
                                     else:
-                                        sprint("Invalid Choice, Choose a option!"
-                                               "\n")
-                                        Move =  input("[A] Head Back onto the "
-                                                      "Highway?\n[B] Take the"
+                                        sprint("Invalid Choice, Choose a "
+                                               "option!\n")
+                                        Move =  input("[A] Head Back onto the"
+                                                     " Highway?\n[B] Take the"
                                          " Backroads\n").lower()
 
                         elif Move == 'b':
-                            sprint("The Matrix Agents in sedans Were both waiting"
+                            sprint("The Matrix Agents in sedans Were both "
+                                   "waiting"
                                    " for you at the Highway Entrance\n")
                             sprint("You Should have Waited Abit Longer\n")
                             sprint("Mission Failed.")
@@ -170,8 +172,8 @@ def scenario():
                 else:
                     sprint("Invalid Choice, Choose a option!\n")
                     Move = input("[A] Floor it and try to outpace them?\n[B]"
-                                " Get off the Highway into Backstreets at the next"
-                               " exit and then Try to lose them?\n").lower()
+                                " Get off the Highway into Backstreets at the"
+                            " next exit and then Try to lose them?\n").lower()
 
  
 
@@ -187,8 +189,8 @@ def scenario():
                " you feel the rear end starting to slip.")
 
         sprint("Do you:")
-        Move = input("[A] Ease off the throttle and regain control?\n[B] Continue"
-                    " fast around the corners drifting as you know"
+        Move = input("[A] Ease off the throttle and regain control?\n[B]"
+                 " Continue fast around the corners drifting as you know"
                      " that time is the essence\n").lower()
         while True:
                 if Move == 'a':
@@ -197,21 +199,22 @@ def scenario():
                     sprint("You slow down and regain traction, carefully"
                           " navigating through the storm. Smart move!\n")
                     player.car.drive(200)
-                    sprint("You have been Driving through the country roads for"
-                     " some time now ... , You look through your rear"
+                    sprint("You have been Driving through the country roads"
+                       " for some time now ... , You look through your rear"
                      " mirrors and see a Dark sedan\n")
-                    sprint("You instantly detect the sedan as the Matrix Agents"
-                          " Sedan\n")
-                    sprint("You now need to Lose the Matrix Agent as the sedan "
-                           "begins picking up speed towards you")
+                    sprint("You instantly detect the sedan as the Matrix "
+                           "Agents Sedan\n")
+                    sprint("You now need to Lose the Matrix Agent as the sedan"
+                           " begins picking up speed towards you")
                     sprint("You know that the Power of your car can easily lose"
                           " the Sedan on the country roads.\n However there is "
                           "also an exit coming up leading to the Highway.\n")
               
                     sprint("Do you:")
-                    Move1 = input("[A] Put your Foot down and try to lose the "
-                             "sedan on the country roads?\n[B] Exit onto the"
-                             " Highway and try to lose the sedan there?\n").lower()
+                    Move1 = input("[A] Put your Foot down and try to lose the"
+                             " sedan on the country roads?\n[B] Exit onto the"
+                             " Highway and try to lose the sedan there?\n"
+                             "").lower()
                     while True:
                             if Move1 == 'a':
                                 sprint("Time: 5:00 pm")
@@ -219,14 +222,14 @@ def scenario():
                                 print(f"{player.name}:\n")
                                 sprint("'OH NO F*Ck!'\n")
                                 print(f"{ai}\n")
-                                sprint(f"{player.name} you were moving at 160mph"
-                                      " on the country roads, Whilst the roads"
-                                     " were still slippery\n")
-                                sprint("Therefore when you came to a harsh turn "
-                                     "the C63 Could not cope and slided out;"
-                                     " Causing you to Crash into a field\n")
-                                sprint("You wake up later, captured by the Matrix"
-                                       " Agents\n")
+                                sprint(f"{player.name} you were moving at "
+                                 "160mph on the country roads, Whilst the "
+                                 "roads were still slippery\n")
+                                sprint("Therefore when you came to a harsh turn"
+                                      " the C63 Could not cope and slided out;"
+                                      " Causing you to Crash into a field\n")
+                                sprint("You wake up later, captured by the"
+                                       " Matrix Agents\n")
                                 sprint("Mission Failed.")
                                 exit()
 
@@ -235,12 +238,13 @@ def scenario():
                                 sprint("Location: Unknown\n")
                                 print(f"{ai}\n")
                                 sprint(f"Wise Decision {player.name}\n")
-                                sprint("You Successfully exited onto the Highway"
-                                       " with the Sedan still behind you but abit"
-                                       "further\n")
-                                sprint("The power of your car then allowed you to"
-                                      " easily gap the Sedan by miles, And then"
-                                     " continue to California down the Highway\n")
+                                sprint("You Successfully exited onto the "
+                                       "Highway with the Sedan still behind"
+                                       " you but abit further\n")
+                                sprint("The power of your car then allowed you"
+                                  " to easily gap the Sedan by miles, And then"
+                                     " continue to California down the Highway"
+                                     "\n")
                                 player.car.drive(130)
                                 break
 
@@ -251,18 +255,19 @@ def scenario():
                 elif Move == 'b':
                     sprint("Time: 3:35 pm")
                     sprint("Location: Country Roads\n")
-                    sprint("You decide to drift, but the road is too slick!.\n you"
-                     " were moving at 160mph on the country roads You spin out at"
-                     " a harsh turn into some Fields.\n")
+                    sprint("You decide to drift, but the road is too slick!.\n"
+                          " you were moving at 160mph on the country roads You"
+                          " spin out at a harsh turn into some Fields.\n")
                     sprint("You wake up later, captured by Matrix Agents\n")
                     sprint("Mission Failed.")
                     exit()
 
                 else:
                     sprint("Inavlid choice, Choose a option!\n")
-                    Move = input("[A] Ease off the throttle and regain control?\n"
-                                 "[B] Continue fast around the corners drifting as"
-                                 " you know that time is the essence\n").lower()
+                    Move = input("[A] Ease off the throttle and regain control"
+                             "?\n"
+                             "[B] Continue fast around the corners drifting as"
+                             " you know that time is the essence\n").lower()
 
 
 
@@ -272,21 +277,21 @@ def scenario():
         sprint("Time: 3:00 pm")
         sprint("Location: Downtown, Los Angeles\n")
         sprint("You are still driving in Los Angeles")
-        sprint("The city streets are narrow and winding, perfect for the Porsche"
-              " 911 GT3 RS, Therefore you are moving at a great speed.\n")
+        sprint("The city streets are narrow and winding, perfect for the"
+         " Porsche 911 GT3 RS, Therefore you are moving at a great speed.\n")
         sprint("You come to a red light and check your mirrors..\n")
-        sprint("Suddenly you see 2 Black Drones behind you, You instantly realise"
-               " that you are being pursued by Matrix drones.\n")
+        sprint("Suddenly you see 2 Black Drones behind you, You instantly "
+               "realise that you are being pursued by Matrix drones.\n")
         sprint("It just got Worse as the Drones are Equipped with Mini Machine"
               " Guns!\n")
         sprint("These Drones are here for the Kill, And you need to escape them"
               " fast!")
-        sprint("You hear the whirring of the drones above as you take sharp corners"
-               " at full speed.\n")
+        sprint("You hear the whirring of the drones above as you take sharp "
+               "corners at full speed.\n")
 
         print("Do you:\n")
-        Move = input("[A] Head towards the highway so that you can try and outpace"
-                    " them ?\n[B] Stay in the city and look for a Hidden place to "
+        Move = input("[A] Head towards the highway so that you can try and "
+         "outpace them ?\n[B] Stay in the city and look for a Hidden place to "
                     "wait for abit?\n").lower()
 
         while True:
@@ -296,10 +301,10 @@ def scenario():
                 sprint("You head towards the highway and press your foot down,"
                       "But the drones lock onto you with ease in the open. They"
                      " are closing in fast!\n")
-                sprint("The Drones got close enough and Sprayed down your car with"
-                      " the machine guns totally demolishing the tyres.\n")
-                sprint("This caused you to spin out at a high speed on the Highway"
-                       "...\n")
+                sprint("The Drones got close enough and Sprayed down your car "
+                       "with the machine guns totally demolishing the tyres.\n")
+                sprint("This caused you to spin out at a high speed on the "
+                       "Highway ...\n")
                 sprint("You Fatally Crashed and Died as the Engine Blew.\n")
                 print(f"{ai}\n")
                 sprint("'I guess you should Never underestimate Drones'\n")
@@ -309,14 +314,15 @@ def scenario():
             elif Move == 'b':
                 sprint("Time: 3:15 pm")
                 sprint("Location: Downtown, Los Angeles\n")
-                sprint("You stay in the tight city streets.\n using the Porsche's "
-                       "agility to your advantage, You are able to lose the drones"
-                      " and find a underground car park of a Supermarket.\n")
+                sprint("You stay in the tight city streets.\n using the "
+                "Porsche's agility to your advantage, You are able to lose the"
+                " drones and find a underground car park of a Supermarket.\n")
                 player.car.drive(30)
-                sprint("You have Waited in the Underground car park for abit \n")
+                sprint("You have Waited in the Underground car park for abit "
+                       "\n")
                 sprint("You are feeling abit unenergized\n")
-                sprint("It is now the right time to leave the Car park and Resume"
-                       " with your journey.\n")
+                sprint("It is now the right time to leave the Car park and "
+                       "Resume with your journey.\n")
 
                 print("Do you:")
                 Move = input("[A] Go to the supermarket and Re-Energize?\n[B]"
@@ -327,8 +333,9 @@ def scenario():
                         sprint("Well If you Must\n")
                         input("Press ENTER to go inside the supermarket\n")
                         player.visit_supermarket()
-                        sprint(f"{player.name} Now you are Re-Energized, You now "
-                          "need to continue on fast with your Journey Quickly\n")
+                        sprint(f"{player.name} Now you are Re-Energized, You "
+                         "now need to continue on fast with your Journey "
+                         "Quickly\n")
                         input("Press ENTER to continue with your journey\n")
                         sprint("Time : 3:25pm ")
                         sprint("Location : The Highway\n")
@@ -342,24 +349,24 @@ def scenario():
                         sprint("Very Well..\n")
                         sprint("Time : 3:10pm ")
                         sprint("Location : The Highway\n")
-                        sprint("Your now on the Highway on route to the Matrix "
-                               "Base")
+                        sprint("Your now on the Highway on route to the Matrix"
+                               " Base")
                         sprint("Just one Long Road Down to California ....\n")
                         player.car.drive(340)
                         break
 
                     else:
                         sprint("Invalid Choice, Choose a option!\n")
-                        Move = input("[A] Go to the supermarket and Re-Energize?"
-                                     "\n[B] Resume With your Journey?\n").lower()
+                        Move = input("[A] Go to the supermarket and Re-Energize"
+                                   "?\n[B] Resume With your Journey?\n").lower()
 
                 break
 
             else:
                 sprint("Invalid Choice, Choose a option!\n")
-                Move = input("[A] Head towards the highway so that you can try and"
-                 " outpace them ?\n[B] Stay in the city and look for a Hidden place"
-                 " to wait for abit?\n").lower()
+                Move = input("[A] Head towards the highway so that you can try"
+                 " and outpace them ?\n[B] Stay in the city and look for a "
+                 "Hidden place to wait for abit?\n").lower()
 
 
 
@@ -370,41 +377,42 @@ def scenario():
         sprint("Time: 3:00 pm")
         sprint("Location: Downtown, Los Angeles\n")
         sprint("You are still driving in Los Angeles\n")
-        sprint("You are Making your way towards the Highway and out of the City."
-               "\n")
-        sprint("Now you are at a red light, When all of a Sudden you can hear a"
-              " loud Buzzing sound.\n")
-        sprint("You check your mirrors and then you look outside of your car ..."
-               "\n")
+        sprint("You are Making your way towards the Highway and out of the "
+               "City.\n")
+        sprint("Now you are at a red light, When all of a Sudden you can hear"
+              " a loud Buzzing sound.\n")
+        sprint("You check your mirrors and then you look outside of your car "
+               "...\n")
         print(f"{player.name}:\n")
         sprint("'Oh No What The F*CK'\n")
         print(f"{ai}\n")
-        sprint("To your Shock, You have just spotted a Dark Helicopter with Machine"
-               " Guns.\n")
-        sprint("You instantly Realise that the Helicopter was sent by the Matrix to"
-              " Finish you off.\n")
-        sprint("You Now have to act fast before you are completely destroyed by the"
-               " Machine Guns.\n ")
+        sprint("To your Shock, You have just spotted a Dark Helicopter with "
+               "Machine Guns.\n")
+        sprint("You instantly Realise that the Helicopter was sent by the "
+               "Matrix to Finish you off.\n")
+        sprint("You Now have to act fast before you are completely destroyed"
+               " by the Machine Guns.\n ")
         sprint("The Nissan GT-Rs launch control catapults you forward as the"
                " helicopter locks onto your position.")
-        sprint("You can try and outrun the Helicopter on the Highway.\n However you"
-               " could also lose the Helicopter in the city and look for somewehere"
-               " to hide for abit.\n")
+        sprint("You can try and outrun the Helicopter on the Highway.\n "
+         "However you could also lose the Helicopter in the city and look for"
+         " somewehere to hide for abit.\n")
 
         print("Do you:\n")
-        Move = input("[A] Enter the Highway and then try to outrun the Helicopter"
-                   " on the Highway?\n[B] Try and lose the Helicopter on the city"
-                   " streets and Find a place to hide for abit?\n").lower()
+        Move = input("[A] Enter the Highway and then try to outrun the "
+         "Helicopter on the Highway?\n[B] Try and lose the Helicopter on the "
+         "city streets and Find a place to hide for abit?\n").lower()
         while True:
             if Move == 'a':
               sprint("Time: 3:30 pm")
               sprint("Location: Los Angeles, Near the Highway\n")
-              sprint("You head towards the highway and press your foot down, But "
-                     "the Helicopter locks onto you with ease in the open!\n")
-              sprint("The Helicopter got close enough and sprayed down your car with"
-                     " the machine guns totally demolishing your tyres.\n")
-              sprint("This caused you to spin out at a high speed on the Highway..."
-                      "\n")
+              sprint("You head towards the highway and press your foot down, "
+                     "But the Helicopter locks onto you with ease in the open!"
+                     "\n")
+              sprint("The Helicopter got close enough and sprayed down your car"
+                    " with the machine guns totally demolishing your tyres.\n")
+              sprint("This caused you to spin out at a high speed on the"
+                    " Highway...\n")
               sprint("You Fatally Crashed and Died as the Engine Blew.\n")
               print(f"{ai}\n")
               sprint("'I guess you should Never underestimate A Helicopter with"
@@ -415,31 +423,33 @@ def scenario():
             elif Move == 'b':
                sprint("Time: 3:15 pm")
                sprint("Location: Downtown, Los Angeles\n")
-               sprint("You stay in the tight city streets.\n using the GTRs Beauty"
-               " of Drifting corners smoothly, You are able to lose the Helicopter"
-               " Eventually and find a underground car park of a Supermarket.\n")
+               sprint("You stay in the tight city streets.\n using the GTRs "
+                "Beauty of Drifting corners smoothly, You are able to lose the"
+                " Helicopter Eventually and find a underground car park of a "
+                "Supermarket.\n")
                player.car.drive(30)
                sprint("You have now Waited in the Underground car park for abit"
                       "\n")
                sprint("You are feeling abit unenergized\n")
-               sprint("It is now the right time to leave the Car park and Resume"
-                       " with your journey\n")
+               sprint("It is now the right time to leave the Car park and "
+                      "Resume with your journey\n")
 
                print("Do you:\n")
-               Move = input("[A] Go to the supermarket and Re-Energize?\n[B] Resume"
-                            " With your Journey?\n").lower()
+               Move = input("[A] Go to the supermarket and Re-Energize?\n[B] "
+                             " Resume With your Journey?\n").lower()
                while True:
                    if Move == 'a':
                        sprint("Well If you Must\n")
                        input("Press ENTER to go inside the supermarket\n")
                        player.visit_supermarket()
-                       sprint(f"{player.name} Now you are Re-Energized, You now"
-                             " need to"
-                             "continue on with your Journey Quickly\n")
+                       sprint(f"{player.name} Now you are Re-Energized, You "
+                              "now need to"
+                              " continue on with your Journey Quickly\n")
                        input("Press ENTER to continue with your journey\n")
                        sprint("Time : 3:25pm ")
                        sprint("Location : The Highway\n")
-                       sprint("Your now on the Highway on route to the Matrix Base")
+                       sprint("Your now on the Highway on route to the Matrix "
+                              "Base")
                        sprint("Just one Long Road Down to California ....\n")
                        player.car.drive(320)
                        break
@@ -448,20 +458,22 @@ def scenario():
                        sprint("Very Well..\n")
                        sprint("Time : 3:10pm ")
                        sprint("Location : The Highway\n")
-                       sprint("Your now on the Highway on route to the Matrix Base")
+                       sprint("Your now on the Highway on route to the Matrix"
+                              " Base")
                        sprint("Just one Long Road Down to California ....\n")
                        player.car.drive(320)
                        break
 
                    else:
                         sprint("Invalid Choice, Choose a option!\n")
-                        Move = input("[A] Go to the supermarket and Re-Energize?\n"
+                        Move = input("[A] Go to the supermarket and Re-Energize"
+                                     "?\n"
                                      "[B] Resume With your Journey?\n").lower()
                break
 
             else:
                  sprint("Invalid Choice, Choose a option!\n")
                  Move = input("[A] Enter the Highway and then try to outrun the"
-                             " Helicopter on the Highway?\n[B] Try and lose the "
+                             " Helicopter on the Highway?\n[B] Try and lose the"
                              " Helicopter on the city streets and Find a place"
                              " to hide for abit?\n").lower()

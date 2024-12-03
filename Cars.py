@@ -1,5 +1,3 @@
-# Creating The Blueprint for the Cars
-# Using COMPOSITION
 
 class Engine:
     def __init__(self, engine, horse_power):

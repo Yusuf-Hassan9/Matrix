@@ -163,8 +163,8 @@ def Lb():
            else:
                 print("Invalid Choice\n")
                 sprint("Choose your Move :\n")
-                Move4 = input("[A] Attack with Weapon\n[B] Attack With Strength\n[C]"
-                         " Run Away \n\n").lower()
+                Move4 = input("[A] Attack with Weapon\n[B] Attack With Strength"
+                              "\n[C] Run Away \n\n").lower()
     # Player Deals Damage Regardless
     # Henchman either Attacks Player with Strength or Weapon
         henchman_choice = random.randint(1, 2)

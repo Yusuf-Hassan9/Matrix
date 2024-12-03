@@ -6,7 +6,14 @@ def sprint(str):
    for c in str + '\n':
      sys.stdout.write(c)
      sys.stdout.flush()
-     time.sleep(0.0000009)
+     time.sleep(0.00001)
+
+
+def mhm(str):
+   for c in str + '\n':
+     sys.stdout.write(c)
+     sys.stdout.flush()
+     time.sleep(0.9)
 
 # Error Validation
 def get_valid_input(prompt, options):
@@ -32,7 +39,7 @@ am = "Agent Myth:"
 
 # Press enter to continue 
 def enter():
-    input("Press ENTER to Continue.\n")
+    input("Press ENTER to Continue.\n\n")
    #sprint("Continuing... *60")
 
 
