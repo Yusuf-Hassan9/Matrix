@@ -99,6 +99,7 @@ print(f"{ai}\n")
 sprint("'Here is your Weaponry Selection' \n")
 print("Choose your Weapon Wisely : \n")
 
+# Gettiing player to choose their weapon
 Wc()
 
 # Getting to the Battle
@@ -143,6 +144,7 @@ sprint("\n" + "=" * 40)
 sprint("  == THE MATRIX HENCHMAN BATTLE ==")
 sprint("\n" + "=" * 40)
 
+# Spawning first battle
 Fb()
 enter() 
 
@@ -161,6 +163,7 @@ input("Press ENTER to continue to the next battle:\n\n")
 sprint(f"Your current Health is {player.HP}\n")
 sprint(f"This Henchman's health is {matrix_henchman[1].HP}\n")
 
+# Spawning second battle
 Sb()
 enter()
 
@@ -180,7 +183,7 @@ sprint(f"Your current Health is {player.HP}\n")
 sprint(f"The Henchman Boss health is {henchman.HP}\n")
 input("Press ENTER to continue to the final battle:  \n\n")
 
-# Final Henchman Battle (Mini Boss Battle)
+# Spawning Final Henchman Battle (Mini Boss Battle)
 Lb()
 
 print(f"{hmanb}\n")
@@ -251,15 +254,19 @@ sprint("Location : 9291 Burton Way, Beverly Hills\n")
 
 input("Press ENTER to view your Car Options.\n")
 
-# Description of different cars
+# Description of different cars and spawning them
+
 Car1 = Car(make = "BMW", model = "M5 Cs F90", engine = "S63 4.4-liter"
           " M TwinPower turbo V8", horse_power=627, wheel_size=21,
          tyre="Bridgestone")
+
 Car2 = Car(make = "Mercedes", model = "C63 AMG W204", engine = "M156 6.2-liter"
           "V8", horse_power=450, wheel_size=18, tyre="Michelin")
+
 Car3 = Car(make = "Porsche", model = "911 GT3 RS 997", engine = "4-litre "
            "Boxer 6-cylinder", horse_power=493, wheel_size=19,
           tyre="Michelin Pilot Sport Cup")
+
 Car4 = Car(make = "Nissan", model = " GT-R R35", engine = "VR38 3.8-liter"
           " twin-turbocharged V6", horse_power=530,
          wheel_size=20, tyre="Michelin")
@@ -269,6 +276,7 @@ sprint("2." + Car2.display_car() +"\n")
 sprint("3." + Car3.display_car() + "\n")
 sprint("4." + Car4.display_car() + "\n")
 
+# Spawning Other car scenarios
 scenario()
 
 # End of Car Scenarios And options
@@ -312,7 +320,7 @@ while True:
             player.visit_supermarket()
             sprint("Feeling better already. Now, let's get to work.\n")
         sprint(f"{player.name}, it's game time.\n")
-        break
+        break  # Exit the loop after a valid choice
 
     elif Move == 'b':
         print(f"{ai}\n")
@@ -321,18 +329,17 @@ while True:
         if player.HP <= 80:
             sprint(f"{player.name} your Health is Very low.\n")
             sprint("You should Visit Target and Re-Energize before going"
-                  " into the"
-                   " Matrix Base.\n")
+                  " into the Matrix Base.\n")
             input("Press ENTER to go inside Target")
             player.visit_supermarket()
             sprint("Now thats Better!\n")
-        sprint(f"{player.name} its Gametime now.\n")
-        break
+        sprint(f"{player.name} it's Gametime now.\n")
+        break  # Exit the loop after a valid choice
 
     else:
-        sprint("Invalid Choice, Choose a option!\n")
-        input("[A] Stash your car in the Underground Car Park of Walmart ?\n"
-             "[B] Stash your car behind Target ? \n").lower()
+        sprint("Invalid Choice, Choose an option!\n")
+        Move = input("[A] Stash your car in the Underground Car Park of Walmart ?\n"
+                     "[B] Stash your car behind Target ? \n").lower()
 
     # Approaching the Matrix Base
 enter()
@@ -357,6 +364,7 @@ sprint("All, You need to do now is find the Files room")
 sprint("There is a staircase infront of you which goes Upstairs and"
        " Downstairs.\n")
 
+# Spawning Infiltration scenarios
 Infiltration()
 
 # Hacking Mini Game
@@ -417,7 +425,7 @@ sprint(f"As you grab the Stick, an alarm suddenly blares throughout the "
 sprint("Red lights start flashing, and a loud siren echoes through the vault."
        "\n")
 
-# Middle Scene
+# Escaping the Base
 print(f"{ai}\n")
 sprint(f"'Oh no, {player.name}! You've triggered an alarm! You need to get out"
       " of there fast!'\n")
@@ -447,6 +455,7 @@ sprint(f"The Matrix Guard current health is {matrix_guard.HP}\n")
 
 
 sprint("\n== MATRIX GUARD BATTLE ==\n")
+# Matrix Guard Battle
 Gb()
 enter()
 
@@ -487,6 +496,8 @@ sprint(f"{player.name} your current health is {player.HP}.\n")
 sprint("\n" + "=" * 40)
 sprint("  == THE BATTLE OF MATRIX AGENTS ==")
 sprint("\n" + "=" * 40)
+
+# Spawning Matrix Agent Battle
 Mab()
 enter()
 
@@ -502,7 +513,7 @@ sprint("The Last Matrix Agent pulls out a Matrix Rifle and starts spraying "
        "bullets in your direction.\n")
 print(f"{player.name}, your health is currently {player.HP}.\n")
 
-
+# Spwaning Matrix Agent Battle
 Mab2()
 enter()
 
@@ -658,7 +669,5 @@ print(f"{ai}\n")
 sprint("YOU'VE DONE IT!!!\n")
 sprint("The Matrix has been Defeated.")
 sprint("The fate of the World is now saved.")
+# End of game
 
-# Comment every line which needs explaining
-# Adjust sprint time
-# Last - Any extra decoration

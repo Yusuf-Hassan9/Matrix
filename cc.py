@@ -46,12 +46,28 @@ class Character:
             exit()
 
     # Supermarket Feature
+
+    # Increases the player's HP by a specified amount,
+    # but caps it at 100 if the increase goes beyond this value.
+    # Mechanics:
+    # Adds the amount to the player's HP.
+    # If the new HP exceeds 100, it is reset to 100.
+    # Prints a message showing the updated HP.
+
     def increase_hp(self, amount):
         self.HP += amount
-        if self.HP < 100:  # Assuming 100 is the maximum HP cap
+        if self.HP < 100:
             self.HP = 100
         print(f"{self.name}'s HP increased to {self.HP}.\n")
 
+
+        # Simulates the player visiting the supermarket, where they can choose an item to increase their HP.
+        # Flow:
+        # Displays a list of items with their corresponding HP increase values.
+        # The player is prompted to choose an item by entering the number.
+        # The selected item's HP increase is added to the player's current HP using the increase_hp method.
+        # If the user input is invalid (either non-numeric or out of range), the process is repeated.
+        
     def visit_supermarket(self):
         print("Welcome to the supermarket. Choose food or drink to"
               " re-energize:\n")
@@ -69,7 +85,8 @@ class Character:
 
         # error validation
         try:
-            choice = int(input("\nChoose an item by entering the number:\n ")) - 1
+            choice = int(input("\nChoose an item by entering the number:\n "
+                               "")) - 1
             if 0 <= choice < len(supermarket_items):
                 item_name, HP_increase = supermarket_items[choice]
                 print(f"\nYou chose {item_name}, which increases your HP by"
@@ -82,6 +99,7 @@ class Character:
         except ValueError:
             print("\nInvalid input. Please enter a number.\n")
             player.visit_supermarket()
+
 
 class Henchman:
     def __init__(self, name):
@@ -212,27 +230,26 @@ class Agent_Myth:
             player.HP += random.randrange(200)
             battle = False
 
-
-
+# Creating the final boss agent myth
 agent_myth = Agent_Myth("Agent Myth")
 
-# The Henchman Boss
+# Creating the Henchman Final Boss
 henchman = Boss("Matrix Henchman Final Boss")
 
-# Creating Two Henchman Easy
+# Creating The Matrix Henchman
 matrix_henchman = []
-
 for i in range(2):
     matrix_henchman.append( Henchman("Matrix Henchman"))
 
-
-
+# Creating the Matrix Agents
 Matrix_agent = []
 for i in range(2):
     Matrix_agent.append( Matrix_Agents("Matrix Agent"))
 
+# Creating the Matrix Guard
 matrix_guard = Matrix_Guard("Matrix Guard")
 
+# Creating the player
 player = Character(input("What is your name player :\n "), 100 , 25)
 
 

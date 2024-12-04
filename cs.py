@@ -5,20 +5,52 @@ from Cars import *
 
  ## CAR SCENARIOS - THE MATRIX ##
                  
+# Creating car classes
 
+# Make: BMW
+# Model: M5 CS F90
+# Engine: S63 4.4-liter M TwinPower Turbo V8
+# Horsepower: 627 BHP
+# Wheel Size: 21 inches 
+# Tyres: Bridgestone
 
 Car1 = Car(make = "BMW", model = "M5 Cs F90", engine = "S63 4.4-liter"
           " M TwinPower turbo V8", horse_power=627, wheel_size=21,
          tyre="Bridgestone")
+
+# Make: Mercedes
+# Model: C63 AMG W204
+# Engine: M156 6.2-liter V8
+# Horsepower: 450 BHP 
+# Wheel Size: 18 inches 
+# Tyres: Michelin
+
 Car2 = Car(make = "Mercedes", model = "C63 AMG W204", engine = "M156 6.2-liter"
           "V8", horse_power=450, wheel_size=18, tyre="Michelin")
+
+# Make: Porsche
+# Model: 911 GT3 RS 997
+# Engine: 4-litre Boxer 6-cylinder
+# Horsepower: 493 BHP 
+# Wheel Size: 19 inches
+# Tyres: Michelin Pilot Sport Cup 
+
 Car3 = Car(make = "Porsche", model = "911 GT3 RS 997", engine = "4-litre "
            "Boxer 6-cylinder", horse_power=493, wheel_size=19,
           tyre="Michelin Pilot Sport Cup")
+
+# Make: Nissan
+# Model: GT-R R35
+# Engine: VR38 3.8-liter twin-turbocharged V6 
+# Horsepower: 530 BHP 
+# Wheel Size: 20 inches 
+# Tyres: Michelin (
+
 Car4 = Car(make = "Nissan", model = " GT-R R35", engine = "VR38 3.8-liter"
           " twin-turbocharged V6", horse_power=530,
          wheel_size=20, tyre="Michelin")
 
+# Selecting a car
 def scenario():
     print(f"{ai}\n")
     sprint("Choose Your Car Wisely :\n")
@@ -59,6 +91,7 @@ def scenario():
                               " R35 \n\n").lower()
 
 
+    # Getting into the car
     input("Press ENTER to get in your car and continue the mission.\n")
     sprint("Time: 2:45 pm")
     sprint("Location: On route to 12th Ave, Santa Cruz\n")
@@ -70,7 +103,6 @@ def scenario():
           " the Area'\n")
 
 
-    
     if player.car == Car1:                     # BMW M5 CS F90 Scenario #
         
         sprint("Time: 3:00 pm")
@@ -292,7 +324,7 @@ def scenario():
         print("Do you:\n")
         Move = input("[A] Head towards the highway so that you can try and "
          "outpace them ?\n[B] Stay in the city and look for a Hidden place to "
-                    "wait for abit?\n").lower()
+                    "wait for abit?\n\n").lower()
 
         while True:
             if Move == 'a':
@@ -324,7 +356,7 @@ def scenario():
                 sprint("It is now the right time to leave the Car park and "
                        "Resume with your journey.\n")
 
-                print("Do you:")
+                print("Do you: \n")
                 Move = input("[A] Go to the supermarket and Re-Energize?\n[B]"
                             " Resume With your Journey?\n").lower()
 

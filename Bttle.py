@@ -37,7 +37,6 @@ def Wc():
             sprint(f"There was an unexpected error: {e}\nPlease try again.\n")
 
 
-
 def Fb():
     # First Henchman Battle
     while battle==True:
@@ -48,8 +47,8 @@ def Fb():
             sprint("What will you do?\n")
             print("'Attack' or 'Run'\n")
             sprint("Choose your Move :\n")
-            Move3 = input("[A] Attack with Weapon\n[B] Attack With Strength\n[C]"
-                         " Run Away \n\n").lower()
+            Move3 = input("[A] Attack with Weapon\n[B] Attack With Strength\n"
+                          "[C] Run Away \n\n").lower()
             if Move3 == 'a':
                 player.weapon1_attack(matrix_henchman[0])
                 break
@@ -61,8 +60,8 @@ def Fb():
                 break
             else:
                 print("Invalid Choice\n")
-                Move3 = input("[A] Attack with Weapon\n[B] Attack With Strength\n"
-                              "[C]Run Away \n\n").lower()
+                Move3 = input("[A] Attack with Weapon\n[B] Attack With "
+                              "Strength\n[C]Run Away \n\n").lower()
 
         # Making Player Deal Damage Throughout Battle
         henchman_choice = random.randint(1, 2)
@@ -98,8 +97,8 @@ def Sb():
             sprint("What will you do?\n")
             print("'Attack' or 'Run'\n")
             sprint("Choose your Move : \n")
-            Move3 = input("[A] Attack with Weapon\n[B] Attack With Strength\n[C]"
-                         " Run Away \n\n").lower()
+            Move3 = input("[A] Attack with Weapon\n[B] Attack With Strength\n"
+                          "[C] Run Away \n\n").lower()
             if Move3 == 'a':
                 player.weapon1_attack(matrix_henchman[1])
                 break
@@ -112,8 +111,8 @@ def Sb():
             else:
                 print("Invalid Choice\n")
                 sprint("Choose your Move :\n")
-                Move3 = input("[A] Attack with Weapon\n[B] Attack With Strength\n"
-                              "[C] Run Away \n\n").lower()
+                Move3 = input("[A] Attack with Weapon\n[B] Attack With "
+                              "Strength\n[C] Run Away \n\n").lower()
 
 
         # Making Player Deal Damage Throughout the Battle
@@ -149,8 +148,8 @@ def Lb():
            sprint("What will you do?\n")
            print("'Attack' or 'Run'\n")
            sprint("Choose your Move : \n")
-           Move4 = input("[A] Attack with Weapon\n[B] Attack With Strength\n[C]"
-                         " Run Away \n\n").lower()
+           Move4 = input("[A] Attack with Weapon\n[B] Attack With Strength\n"
+                         "[C] Run Away \n\n").lower()
            if Move4 == 'a':
                 player.weapon1_attack(henchman)
                 break
@@ -163,7 +162,8 @@ def Lb():
            else:
                 print("Invalid Choice\n")
                 sprint("Choose your Move :\n")
-                Move4 = input("[A] Attack with Weapon\n[B] Attack With Strength"
+                Move4 = input("[A] Attack with Weapon\n[B] Attack With "
+                              "Strength"
                               "\n[C] Run Away \n\n").lower()
     # Player Deals Damage Regardless
     # Henchman either Attacks Player with Strength or Weapon
@@ -299,7 +299,8 @@ def Mab2():
 
         while True:
             sprint("\n====== ENCOUNTER ======\n")
-            sprint("The Matrix Agent Agitated now holds up two rifles at you.\n")
+            sprint("The Matrix Agent Agitated now holds up two rifles at you."
+                   "\n")
             print("What will you do?\n")
             print("Make your Move!: \n")
             Move = input("[A] Attack with Weapon\n[B] Attack with ?????"
